@@ -14,12 +14,12 @@ class HomeController extends Controller
     }
     public function landing()
     {
-        return view('mahasiswalanding');
+        return view('welcome');
     }
     public function petunjuk()
     {
-        $petunjuk = Petunjuk::orderBy('id', 'desc')->first();
-        return view('mahasiswadownload',['petunjuk' => $petunjuk]);
+        // $petunjuk = Petunjuk::orderBy('id', 'desc')->first();
+        // return view('mahasiswadownload',['petunjuk' => $petunjuk]);
     }
     
 }
