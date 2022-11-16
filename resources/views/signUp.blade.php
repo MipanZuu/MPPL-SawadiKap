@@ -42,10 +42,8 @@
             class="pl-8 border-b-10 rounded-xl border-primarycolor text-lg"
           />
         </div >
-        <div class="mt-3">
-          <a href=""class="text-white text-sm opacity-50 text-right align-content-end">Forgot Your Password?</a>
-        </div>
-        <button type="submit" class="mt-8 text-black text-m bg-white w-32 h-10 rounded-full">LogIn</button>
+        <button type="submit" class="mt-10 text-black text-m bg-white w-32 h-10 rounded-full">Log
+                        In</button>
       </form>
     </div>
     <div class="text-sm opacity-60 px-22 text-center text-white">
