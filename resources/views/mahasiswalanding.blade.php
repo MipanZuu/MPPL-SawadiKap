@@ -1,5 +1,3 @@
-<html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,43 +16,38 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
-<body>
+<body style="background-color: #2148C0;">
     <img
-      src="pictures/wave.png"
-      class="fixed lg:block inset-0 h-full"
+      src="pictures/BG.png"
+      class="fixed lg:block inset-0 h-full w-full"
       style="z-index: -1;"
     />
     <div class="w-screen h-screen flex flex-col justify-center items-center ">
       <img
-        src="pictures/logo cerebrum.png"
+        src="pictures/malindo.png"
         class="wdh mb-5"
       />
       <form action="{{route('login.post')}}" method="POST" class="flex flex-col justify-center items-center w-1/2">
       @csrf  
-        <h2
-          class="my-8 font-display font-bold text-3xl text-gray-700 text-center mb-10 mt-5"
-        >
-          Selamat Datang!
-        </h2>
         <div class="relative">
-          <i class="fa fa-user text-l m-auto text-black align-items-md-end"></i>
+          <i class="fa fa-user text-l m-auto text-black align-items-md-end" style="color: white;"></i>
           <input
           type="text" id="username" name="username" placeholder="Username"
             class="pl-8 border-b-2 rounded-2xl border-primarycolor text-lg"
           />
         </div>
         <div class="relative mt-8">
-          <i class="fa fa-lock text-l m-auto text-black align-items-md-end pencet" onclick="myFunction()"></i>
+          <i class="fa fa-lock text-l m-auto text-black align-items-md-end pencet" style="color: white;" onclick="myFunction()"></i>
           <input type="password" id="password" name="password" placeholder="Password"
             class="pl-8 border-b-10 rounded-2xl border-primarycolor text-lg"
           />
         </div >
-        <button type="submit" class="mt-10 text-white text-m bg-backgroundCerebrum w-32 h-10 rounded-full">Log
+        <button type="submit" class="mt-10 text-black text-m bg-white w-32 h-10 rounded-full">Log
                         In</button>
       </form>
     </div>
     <div class="text-sm opacity-30 px-22 text-center">
-        TCenayang 2022. All Rights Reserved
+        Sawadikap. All Rights Reserved
     </div>
   </body>
 
