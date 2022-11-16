@@ -49,7 +49,7 @@
       </form>
     </div>
     <div class="text-sm opacity-60 px-22 text-center text-white">
-        Sawadikap. All Rights Reserved
+        Sawadikap. All Rights Reserved!
     </div>
   </body>
 
