@@ -33,13 +33,13 @@
           <i class="fa fa-user text-l m-auto text-black align-items-md-end" style="color: white;"></i>
           <input
           type="text" id="username" name="username" placeholder="Username"
-            class="pl-8 border-b-2 rounded-2xl border-primarycolor text-lg"
+            class="pl-8 border-b-2 rounded-xl border-primarycolor text-lg"
           />
         </div>
         <div class="relative mt-8">
           <i class="fa fa-lock text-l m-auto text-black align-items-md-end pencet" style="color: white;" onclick="myFunction()"></i>
           <input type="password" id="password" name="password" placeholder="Password"
-            class="pl-8 border-b-10 rounded-2xl border-primarycolor text-lg"
+            class="pl-8 border-b-10 rounded-xl border-primarycolor text-lg"
           />
         </div >
         <button type="submit" class="mt-10 text-black text-m bg-white w-32 h-10 rounded-full">Log
