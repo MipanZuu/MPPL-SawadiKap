@@ -66,8 +66,6 @@
         <div class="bg-gray-300 min-h-screen align-items-lg-start">
           <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
             <!--Grid starts here-->
-            
-            <!-- Grid ends here..-->
 
 
           </div>
