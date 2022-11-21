@@ -65,28 +65,43 @@
         
         <div class="bg-gray-300 min-h-screen align-items-lg-start">
           <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
-            <!--Grid starts here-->
-
-
+          <form action="{{route('listmahasiswa')}}" method="GET" role='search'>
+                    @csrf
+                    <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Search">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default ml-3">
+                            <img class="w-5 " src="pictures/search_grey.png" alt="">
+                        </button>
+                    </span>
+                </form>
           </div>
           
 
 
-<!-- 
-          <div class=" mt-5 grid  lg:grid-cols-3  md:grid-cols-3 p-4 gap-3">
 
-            <div class="col-span-2 flex flex-col   p-8 bg-white rounded shadow-sm">
-              <b class="flex flex-row text-gray-500">Property Release for today</b>
+          <div class=" mt-5 grid lg:grid-cols-3  md:grid-cols-3 p-4 gap-3">
+            <div class="col-span-2 flex flex-col p-8 bg-white rounded-lg shadow-xl">
+              <b class="flex flex-row text-gray-500"></b>
               <canvas class="p-5" id="chartLine"></canvas>
             </div>
 
-            <div class=" flex flex-col   p-5 bg-white rounded shadow-sm">
-              <b class="flex flex-row text-gray-500">Occupancy Percentage</b>
+            <div class=" flex flex-col p-5 bg-white rounded-lg shadow-xl">
+              <b class="flex flex-row text-gray-500"></b>
               <canvas class="p-5" id="chartRadar"></canvas>
+            </div>
+
+            <div class=" flex flex-col p-5 bg-white rounded-lg shadow-xl">
+              <b class="flex flex-row text-gray-500"></b>
+              <canvas class="p-5" id="chartRadar"></canvas>
+            </div>
+
+            <div class="col-span-2 flex flex-col p-8 bg-white rounded-lg shadow-xl">
+              <b class="flex flex-row text-gray-500"></b>
+              <canvas class="p-5" id="chartLine"></canvas>
             </div>
           </div>
 
-           -->
+          
           <!--Table-->
           
           </div>
