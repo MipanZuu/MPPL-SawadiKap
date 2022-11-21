@@ -37,13 +37,13 @@
           <div class="flex flex-col space-x-6">
           </div>
           <div class="w-20 h-20">
-          <img src="/pictures/malaysia.png" class="w-20" alt="">
+            <a href=""><img src="/pictures/malaysia.png" class="w-20" alt=""></a>
         </div>
         <div class="w-20 h-20">
-          <img src="/pictures/indonesia.png" class="w-20" alt="">
+          <a href=""><img src="/pictures/indonesia.png" class="w-20" alt=""></a>
         </div>
           <div class="w-20 h-20">
-          <img src="/pictures/account.png" class="w-20" alt="">
+            <img src="/pictures/account.png" class="w-20" alt="">
         </div>
         </div>
 
