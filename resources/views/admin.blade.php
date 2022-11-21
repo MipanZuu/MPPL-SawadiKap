@@ -16,6 +16,13 @@
                 <img src="/pictures/book.png" alt="">
             </div>
         </form>
+
+        <form action="{{route('backup')}}" method="POST">
+            @csrf
+            <div class="flex justify-center mt-8">
+                <img src="/pictures/Add.png" alt="">
+            </div>
+        </form>
         <form action="{{route('logout.post')}}" method="POST">
             @csrf
             <div class="flex justify-center mt-8">
