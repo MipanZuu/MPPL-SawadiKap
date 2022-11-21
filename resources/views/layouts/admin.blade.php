@@ -14,7 +14,7 @@
 
 <body>
   <div class="flex">
-    <div class="flex flex-col space-y-5 justify-between min-h-screen w-60 px-2 py-4 bg-gray-50 h-screen sticky top-0">
+    <div class="flex flex-col space-y-5 justify-between min-h-screen w-40 px-2 py-4 bg-gray-100 h-screen sticky top-0 rounded-r-3xl">
       <div class=" flex items-center justify-between text-gray-600 text-3xl px-5 ml-3"><b></b></div>
 
       <div class="flex flex-col flex-auto">

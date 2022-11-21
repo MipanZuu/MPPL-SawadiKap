@@ -120,6 +120,7 @@ class AdminController extends Controller
     public function loginpage()
     {
         return view('welcome');
+
     }
 
     public function login(Request $request){

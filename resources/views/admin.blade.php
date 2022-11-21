@@ -111,14 +111,18 @@
     <div class="flex-auto">
       <div class="flex flex-col">
         <div class="flex bg-gray-300 h-24 p-2 drop-shadow-2xl justify-between sticky top-0">
-          <div class="flex flex-col space-x-3">
+          <div class="flex flex-col space-x-6">
 
-            <img src="/pictures/malaysia.png" alt="">
-            <img src="/pictures/indonesia.png" alt="">
 
           </div>
           <div class="w-20 h-20">
-          <img src="/pictures/avatar.svg" class="w-20" alt="">
+          <img src="/pictures/malaysia.png" class="w-20" alt="">
+        </div>
+        <div class="w-20 h-20">
+          <img src="/pictures/indonesia.png" class="w-20" alt="">
+        </div>
+          <div class="w-20 h-20">
+          <img src="/pictures/account.png" class="w-20" alt="">
         </div>
         </div>
         
