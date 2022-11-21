@@ -125,6 +125,20 @@
           <img src="/pictures/account.png" class="w-20" alt="">
         </div>
         </div>
+
+        <div class="flex bg-gray-300 h-24 p-2 drop-shadow-2xl justify-center sticky top-0">
+          <div class="flex flex-row space-x-20">
+            <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
+              <p class="font-regular text-black hover:text-pink-600 text-sm">Javanese</p>
+              </a>
+              <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
+                <p class="font-regular text-black hover:text-pink-600 text-sm">Sundanese</p>
+                </a>
+                <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
+                  <p class="font-regular text-black hover:text-pink-600 text-sm">Betawinese</p>
+                  </a>
+          </div>
+        </div>
         
         <div class="bg-gray-300 min-h-screen align-items-lg-start">
           <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
