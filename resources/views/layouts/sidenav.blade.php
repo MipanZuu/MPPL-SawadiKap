@@ -147,10 +147,10 @@
 
 
 
-    @elseif(Auth::user()->role == 'Super User')
+    @elseif(Auth::user()->role == 'Admin')
     <div class="flex">
     <div class="flex flex-col space-y-5 justify-between min-h-screen w-60 px-2 py-4 bg-gray-50 h-screen sticky top-0">
-      <div class=" flex items-center justify-between text-gray-600 text-3xl px-5 ml-3"><b>Buku Hijau Cerebrum</b></div>
+      <div class=" flex items-center justify-between text-gray-600 text-3xl px-5 ml-3"><b></b></div>
 
       <div class="flex flex-col flex-auto">
         <div class="items-center ml-10">
@@ -528,7 +528,6 @@
                     nilai.classList.toggle('hidden');
                     nilai.classList.toggle('flex');
                 })
->>>>>>> 42ff4b15a90efa3e01d8d9ceea06a5e8d45e2a23
             })
     
         </script>

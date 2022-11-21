@@ -99,13 +99,13 @@ class AdminController extends Controller
     {
         if(Auth::check()){
             $user = Auth::user();
-            $mahasiswas = Mahasiswa::count();
-            $panitias = Panitia::count();
-            $ormawas = Ormawa::count();
-            $kegiatanpanitias = KegiatanPanitia::count();
-            $kegiatans = Kegiatan::count();
+            // $mahasiswas = Mahasiswa::count();
+            // $panitias = Panitia::count();
+            // $ormawas = Ormawa::count();
+            // $kegiatanpanitias = KegiatanPanitia::count();
+            // $kegiatans = Kegiatan::count();
             if ($user->role == 'Admin'){
-                return view('admin',compact('mahasiswas','panitias','ormawas','kegiatanpanitias','kegiatans'));
+                return view('admin');
             }
             else if($user->role == 'User'){
                 return redirect('ormawa');
