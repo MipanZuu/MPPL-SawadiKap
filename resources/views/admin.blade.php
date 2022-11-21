@@ -1,107 +1,30 @@
 @extends('layouts.admin')
 @section('content')
-<div class="p-2 hover:bg-pink-100">
-          <div class="flex flex-row space-x-3 mt-5">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-700" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-            </svg>
-            <!-- <h4 class="font-bold text-gray-500 hover:text-pink-600 ">Manajemen Mahasiswa</h4> -->
-            
-            <a href="{{route('listmahasiswa')}}" class="text-gray-500 hover:text-pink-600">
-                    Manajemen Mahasiswa
-            </a>
-          </div>
-        </div>
-
-        <button id="listuser">
-        <div class="p-2 hover:bg-pink-100 ">
-          <div class="flex flex-row space-x-3 ">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500 " viewBox="0 0 20 20"
-              fill="currentColor">
-              <path
-                d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-            </svg>
-            <h4 class="font-regular text-gray-500 hover:text-pink-600">Manajemen User</h4>
-            <div class="w-4 mt-1">
-                <img src="pictures/dropdown.png" alt="">
-            </div>
-        </div>
-        </div>
-        </button>
-        <div id="droplistuser" class="hidden flex-col pl-11 text-lg">
-            <a href="{{route('listUser')}}" class="pb-4">
-                <h4 class="font-regular text-gray-500 hover:text-pink-600 text-sm">List User</h4>
-            </a>
-            <a href="{{route('listpanitia')}}" class="pb-4">
-            <h4 class="font-regular text-gray-500 hover:text-pink-600 text-sm">List Panitia</h4>
-            </a>
-            <a href="{{route('listormawa')}}" class="pb-4">
-            <h4 class="font-regular text-gray-500 hover:text-pink-600 text-sm">List Ormawa</h4>
-            </a>
-        </div>
-
-
-        <button id="listkegiatan">
-        <div class="p-2 hover:bg-pink-100">
-          <div class="flex flex-row space-x-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-            </svg>
-            <h4 class="font-regular text-gray-500 hover:text-pink-600">Kegiatan</h4>
-            <div class="w-4 mt-1">
-                <img src="pictures/dropdown.png" alt="">
-            </div>  
-        </div>
-        </div>
-        </button>
-        <div id="droplistkegiatan" class="hidden flex-col pl-11 text-lg">
-            <a href="{{route('listtahap')}}" class="pb-4">
-                <h4 class="font-regular text-gray-500 hover:text-pink-600 text-sm">Manajemen Kegiatan</h4>
-            </a>
-            <a href="{{route('listdivisi')}}" class="pb-4">
-            <h4 class="font-regular text-gray-500 hover:text-pink-600 text-sm">List Divisi</h4>
-            </a>
-            <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
-            <h4 class="font-regular text-gray-500 hover:text-pink-600 text-sm">List Kegiatan</h4>
-            </a>
-        </div>
-      
-
       <div class="flex flex-col mt-10">
       <a href="{{route('admin')}}">
       <div class="flex justify-center mt-2">
-                <button class="text-white text-xs bg-blue-300 w-24 h-7 rounded-full">
-                    Home
-                </button>
+                <img src="/pictures/home.png" alt="">
             </div> 
       <a href="{{route('uploadpetunjuk')}}">
-      <div class="flex justify-center mt-2">
-                <button class="text-white text-xs bg-green-500 w-24 h-7 rounded-full">
-                    Upload
-                </button>
+      <div class="flex justify-center mt-8">
+                <img src="/pictures/explore.png" alt="">
             </div>
         </a>
         <form action="{{route('backup')}}" method="POST">
             @csrf
-            <div class="flex justify-center mt-2">
-                <button type="submit"
-                    class="text-white text-xs bg-backgroundCerebrum w-24 h-7 rounded-full">Backup</button>
+            <div class="flex justify-center mt-8">
+                <img src="/pictures/book.png" alt="">
             </div>
         </form>
         <form action="{{route('logout.post')}}" method="POST">
             @csrf
-            <div class="flex justify-center mt-2">
+            <div class="flex justify-center mt-8">
                 <button type="submit"
                     class="text-white text-xs bg-red-500 w-24 h-7 rounded-full">Logout</button>
             </div>
         </form>
-        <div class="text-sm opacity-30 px-22 text-center mt-96">
-        TCenayang 2022. All Rights Reserved
+        <div class="text-sm opacity-30 px-22 text-center mt-40 sticky">
+        Sawadikap 2022. All Rights Reserved
     </div>
       </div>
     </div>
@@ -112,8 +35,6 @@
       <div class="flex flex-col">
         <div class="flex bg-gray-300 h-24 p-2 drop-shadow-2xl justify-between sticky top-0">
           <div class="flex flex-col space-x-6">
-
-
           </div>
           <div class="w-20 h-20">
           <img src="/pictures/malaysia.png" class="w-20" alt="">
@@ -126,7 +47,9 @@
         </div>
         </div>
 
-        <div class="flex bg-gray-300 h-24 p-2 drop-shadow-2xl justify-center sticky top-0">
+        
+
+        <div class="flex bg-gray-300 h-24 p-2 drop-shadow-2xl justify-center sticky top-14">
           <div class="flex flex-row space-x-20">
             <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
               <p class="font-regular text-black hover:text-pink-600 text-sm">Javanese</p>
