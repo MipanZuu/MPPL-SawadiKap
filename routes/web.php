@@ -34,6 +34,7 @@ Route::post('/mahasiswa/{id}/delete', [AdminController::class, 'deleteMahasiswa'
 
 /* ADMIN ROUTES */
 Route::get('/login',[AdminController::class, 'loginpage'])->name('login');
+Route::get('/admin-malay',[AdminController::class, 'viewMalayAdmin'])->name('viewmalayadmin');
 Route::get('/petunjuk/upload',[AdminController::class, 'uploadpetunjuk'])->name('uploadpetunjuk');
 Route::post('/petunjuk/upload/post',[AdminController::class, 'upload'])->name('petunjuk.post');
 Route::post('/loginUser',[AdminController::class, 'login'])->name('login.post');

@@ -123,11 +123,16 @@ class AdminController extends Controller
 
     }
     
-    public function signupPage()
+    public function viewMalayAdmin()
     {
-        return view('signup');
+        return view('admin-malay');
     }
 
+    public function viewIndoAdmin(){
+        return view('admin');
+    }
+
+    
     public function login(Request $request){
        $request->validate([
             'username' => 'required',

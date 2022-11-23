@@ -61,14 +61,8 @@
         <div class="flex bg-gray-300 h-12 p-2 drop-shadow-2xl justify-center sticky top-24">
           <div class="flex flex-row space-x-20">
             <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
-              <p class="font-regular text-black hover:text-pink-600 text-sm">Javanese</p>
+              <p class="font-regular text-black hover:text-pink-600 text-sm">Melayu</p>
               </a>
-              <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
-                <p class="font-regular text-black hover:text-pink-600 text-sm">Sundanese</p>
-                </a>
-                <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
-                  <p class="font-regular text-black hover:text-pink-600 text-sm">Betawinese</p>
-                  </a>
           </div>
         </div>
         
