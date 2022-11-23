@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-      <div class="flex flex-col mt-80">
+      <div class="flex flex-col mt-64">
       <a href="{{route('admin')}}">
       <div class="flex justify-center mt-2">
                 <img src="/pictures/home.png" alt="">
@@ -30,7 +30,7 @@
                     class="text-white text-xs bg-red-500 w-24 h-7 rounded-full">Logout</button>
             </div>
         </form>
-        <div class="text-sm opacity-30 px-22 text-center mt-64 sticky">
+        <div class="text-sm opacity-30 px-22 text-center mt-36 sticky">
         Sawadikap 2022. All Rights Reserved
     </div>
       </div>
