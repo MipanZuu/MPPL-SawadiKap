@@ -17,12 +17,12 @@
             </div>
         </form>
 
-        <form action="{{route('backup')}}" method="POST">
+        {{-- <form action="{{route('backup')}}" method="POST">
             @csrf
             <div class="flex justify-center mt-8">
                 <img src="/pictures/Add.png" alt="">
             </div>
-        </form>
+        </form> --}}
         <form action="{{route('logout.post')}}" method="POST">
             @csrf
             <div class="flex justify-center mt-8">
@@ -112,7 +112,10 @@
 
           
           <!--Table-->
-          
+          <a href="{{route('uploadpetunjuk')}}">
+          <button  title="Add Article"
+        class="fixed z-90 bottom-10 right-8 bg-blue-600 w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-700 hover:drop-shadow-2xl hover:animate-bounce duration-300">&#43;</button>
+      </a>
           </div>
         </div>
       </div>
