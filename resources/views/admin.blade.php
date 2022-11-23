@@ -40,22 +40,24 @@
 
     <div class="flex-auto">
       <div class="flex flex-col">
-        <div class="flex bg-gray-300 h-24 p-2 drop-shadow-2xl justify-between sticky top-0">
-          <div class="flex flex-col space-x-6">
-          </div>
+        <div class="flex bg-gray-300 h-24 p-3 drop-shadow-2xl justify-center  sticky top-0">
+          <div class="flex flex-row space-x-36">
+          
           <div class="w-20 h-20">
-            <a href="{{route('viewmalayadmin')}}"><img src="/pictures/malaysia.png" class="w-20" alt=""></a>
+            <a href="{{route('viewmalayadmin')}}"><img src="/pictures/malaysia.png" class="w-20" alt="">
+            </a>
         </div>
         <div class="w-20 h-20">
-          <a href="{{ route('admin') }}"><img src="/pictures/indonesia.png" class="w-20" alt=""></a>
-        </div>
-          <div class="w-20 h-20">
-            <a href="">
-            <img src="/pictures/account.png" class="w-20" alt="">
+          <a href="{{ route('admin') }}"><img src="/pictures/indonesia.png" class="w-20" alt="">
           </a>
         </div>
+      </div>
+          <a href="{{ route('admin') }}">
+            <img src="/pictures/account.png" class="fixed z-90 top-2 right-3  w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-700 hover:drop-shadow-2xl hover:animate-bounce duration-300" alt="">
+          </a>
+      
+          
         </div>
-
         
 
         <div class="flex bg-gray-300 h-12 p-2 drop-shadow-2xl justify-center sticky top-24">
