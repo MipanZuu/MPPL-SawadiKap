@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -45,8 +45,11 @@
         <div class="mt-3">
           <a href=""class="text-white text-sm opacity-50 text-right align-content-end">Forgot Your Password?</a>
         </div>
-        <button type="submit" class="mt-8 text-black text-m bg-white w-32 h-10 rounded-full">LogIn</button>
+        <button type="submit" class="mt-8 text-black text-m bg-white w-32 h-10 rounded-full">Login</button>
       </form>
+      <a href="{{route('signupPage')}}">
+      <button class="mt-1 text-white text-bold text-m bg-red-600 w-32 h-10 rounded-full">Sign Up!</button>
+    </a>
     </div>
     <div class="text-sm opacity-60 px-22 text-center text-white">
         Sawadikap. All Rights Reserved!

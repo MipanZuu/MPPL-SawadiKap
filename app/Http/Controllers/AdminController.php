@@ -122,6 +122,11 @@ class AdminController extends Controller
         return view('welcome');
 
     }
+    
+    public function signupPage()
+    {
+        return view('signup');
+    }
 
     public function login(Request $request){
        $request->validate([
