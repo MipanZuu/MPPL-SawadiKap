@@ -27,11 +27,11 @@
             @csrf
             <div class="flex justify-center mt-8">
                 <button type="submit"
-                    class="text-white text-xs bg-red-500 w-24 h-7 rounded-full">Logout</button>
+                    class="text-white text-xs bg-red-500 w-24 h-7 rounded-full">Keluar</button>
             </div>
         </form>
         <div class="text-sm opacity-30 px-22 text-center mt-36 sticky">
-        Sawadikap 2022. All Rights Reserved
+        Sawadikap 2022. Hak cipta terpelihara
     </div>
       </div>
     </div>
@@ -53,7 +53,7 @@
           </div>
         </div>
             <a href="{{ route('admin') }}">
-              <img src="/pictures/account.png" class="fixed z-90 top-2 right-3  w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-700 hover:drop-shadow-2xl hover:animate-bounce duration-300" alt="">
+              <img src="/pictures/account.png" class="fixed z-90 top-2 right-3  w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-300 hover:drop-shadow-2xl hover:animate-bounce duration-300" alt="">
             </a>
         
             
@@ -75,7 +75,7 @@
           <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
           <form action="{{route('listmahasiswa')}}" method="GET" role='search'>
                     @csrf
-                    <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Search">
+                    <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Cari">
                     <span class="input-group-btn">
                         <button type="submit" class="btn btn-default ml-3">
                             <img class="w-5 " src="pictures/search_grey.png" alt="">
