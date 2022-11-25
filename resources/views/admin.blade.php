@@ -52,7 +52,7 @@
           </a>
         </div>
       </div>
-          <a href="{{ route('admin') }}">
+          <a href="{{ route('viewProfile') }}">
             <img src="/pictures/account.png" class="fixed z-90 top-2 right-3  w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-700 hover:drop-shadow-2xl hover:animate-bounce duration-300" alt="">
           </a>
       

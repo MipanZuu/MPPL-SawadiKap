@@ -128,6 +128,11 @@ class AdminController extends Controller
         return view('admin-malay');
     }
 
+    public function viewProfile()
+    {
+        return view('profile');
+    }
+
     public function viewIndoAdmin(){
         return view('admin');
     }
