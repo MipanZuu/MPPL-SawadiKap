@@ -68,7 +68,7 @@
               <div class="mb-4">
                 <label for="language" class="block text-gray-700 text-sm font-bold mb-2">Language</label>
               <select name="language" id="language" class="w-80 rounded-lg">
-                <option class="text-gray-500" value="">Select Language</option>
+                <option value="">Select Language</option>
                 <option value="jv ">Javanese</option>
                 <option value="su">Sundanese</option>
                 <option value="ms">Melayu</option>
