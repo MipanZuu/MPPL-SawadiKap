@@ -137,6 +137,10 @@ class AdminController extends Controller
         return view('admin');
     }
 
+    public function addposting(){
+        return view('addpost');
+    }
+
     
     public function login(Request $request){
        $request->validate([
