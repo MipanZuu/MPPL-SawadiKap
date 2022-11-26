@@ -10,6 +10,7 @@ use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\OrmawaController;
 use App\Http\Controllers\TahapController;
 use App\Http\Controllers\MhsormawaController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Request;
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,8 @@ Route::post('/mahasiswa/{id}/delete', [AdminController::class, 'deleteMahasiswa'
 Route::get('/login',[AdminController::class, 'loginpage'])->name('login');
 Route::get('/admin-malay',[AdminController::class, 'viewMalayAdmin'])->name('viewmalayadmin');
 Route::get('/profile',[AdminController::class, 'viewProfile'])->name('viewProfile');
-Route::get('/addposting',[AdminController::class, 'addposting'])->name('addposting');
+Route::get('/addpostingadmin',[AdminController::class, 'addposting'])->name('addpostingadmin');
+Route::post('/addpostingadmin/add', [AdminController::class, 'add_process_admin'])->name('addpostingadmin.post');
 
 Route::get('/petunjuk/upload',[AdminController::class, 'uploadpetunjuk'])->name('uploadpetunjuk');
 Route::post('/petunjuk/upload/post',[AdminController::class, 'upload'])->name('petunjuk.post');

@@ -17,6 +17,7 @@ use App\Models\Kegiatan;
 use App\Models\Tahap;
 use App\Models\NilaiOrmawa;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Article;
 use PDF;
 use Response;
 
@@ -139,6 +140,26 @@ class AdminController extends Controller
 
     public function addposting(){
         return view('addpost');
+    }
+
+
+
+    public function add_process_admin(Request $request)
+    {
+        $request->validate([
+            'title'=> 'required',
+            'description'=> 'required',
+            'language'=> 'required',
+            'artikel'=> 'required',
+        ]);
+        article::create([
+            'title' => $request['title'],
+            'description' => $request['description'],
+            'language' => $request['language'],
+            'artikel' => $request['artikel']
+        ]);
+        return redirect()->route('viewMalayAdmin')->with('success', 'Artikel Berhasil Ditambahkan');
+
     }
 
     

@@ -55,6 +55,9 @@
         
          
             <div class="px-20 py-10 rounded mx-auto">
+                
+                <form class="flex flex-col gap-y-8  h-full" method="POST" action="{{route('addpostingadmin.post')}}">
+                    @csrf
               <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
                   Title
@@ -83,6 +86,7 @@
                   Upload
                 </button>
               </div>
+                </form>
             </div>
         </div>
         </div>
@@ -92,27 +96,6 @@
         
       
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const nilaibtn = document.querySelector('#listuser')
-        const nilai = document.querySelector('#droplistuser')
-        nilaibtn.addEventListener('click', () => {
-            nilai.classList.toggle('hidden');
-            nilai.classList.toggle('flex');
-        })
-    })
-</script>
-
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const nilaibtn = document.querySelector('#listkegiatan')
-        const nilai = document.querySelector('#droplistkegiatan')
-        nilaibtn.addEventListener('click', () => {
-            nilai.classList.toggle('hidden');
-            nilai.classList.toggle('flex');
-        })
-    })
-</script>
 
 
 @endsection('content')
