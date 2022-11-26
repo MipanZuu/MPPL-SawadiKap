@@ -1433,6 +1433,12 @@ select {
     --tw-bg-opacity: 1;
     background-color: rgba(66, 89, 88, var(--tw-bg-opacity));
 }
+
+.bg-profile {
+    --tw-bg-opacity: 1;
+    background-color: rgba(32, 53, 75, var(--tw-bg-opacity));
+}
+
 .bg-greenTableheader {
     --tw-bg-opacity: 1;
     background-color: rgba(50, 115, 112, var(--tw-bg-opacity));

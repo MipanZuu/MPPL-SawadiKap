@@ -27,11 +27,11 @@
             @csrf
             <div class="flex justify-center mt-8">
                 <button type="submit"
-                    class="text-white text-xs bg-red-500 w-24 h-7 rounded-full">Logout</button>
+                    class="text-white text-xs bg-red-500 w-24 h-7 rounded-full">Keluar</button>
             </div>
         </form>
         <div class="text-sm opacity-30 px-22 text-center mt-36 sticky">
-        Sawadikap 2022. All Rights Reserved
+        Sawadikap 2022. Hak cipta terpelihara
     </div>
       </div>
     </div>
@@ -52,8 +52,8 @@
             </a>
           </div>
         </div>
-            <a href="{{ route('admin') }}">
-              <img src="/pictures/account.png" class="fixed z-90 top-2 right-3  w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-700 hover:drop-shadow-2xl hover:animate-bounce duration-300" alt="">
+            <a href="{{ route('viewProfile') }}">
+              <img src="/pictures/account.png" class="fixed z-90 top-2 right-3  w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-300 hover:drop-shadow-2xl hover:animate-bounce duration-300" alt="">
             </a>
         
             
@@ -75,7 +75,7 @@
           <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
           <form action="{{route('listmahasiswa')}}" method="GET" role='search'>
                     @csrf
-                    <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Search">
+                    <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Cari">
                     <span class="input-group-btn">
                         <button type="submit" class="btn btn-default ml-3">
                             <img class="w-5 " src="pictures/search_grey.png" alt="">
@@ -87,27 +87,57 @@
 
 
 
-          <div class=" mt-5 grid lg:grid-cols-3  md:grid-cols-3 p-4 gap-3">
-            <div class="col-span-2 flex flex-col p-8 bg-white rounded-lg shadow-2xl">
-              <b class="flex flex-row text-gray-500"></b>
-              <canvas class="p-5" id="chartLine"></canvas>
-            </div>
-
-            <div class=" flex flex-col p-5 bg-white rounded-lg shadow-2xl">
-              <b class="flex flex-row text-gray-500"></b>
-              <canvas class="p-5" id="chartRadar"></canvas>
-            </div>
-
-            <div class=" flex flex-col p-5 bg-white rounded-lg shadow-2xl">
-              <b class="flex flex-row text-gray-500"></b>
-              <canvas class="p-5" id="chartRadar"></canvas>
-            </div>
-
-            <div class="col-span-2 flex flex-col p-8 bg-white rounded-lg shadow-2xl">
-              <b class="flex flex-row text-gray-500"></b>
-              <canvas class="p-5" id="chartLine"></canvas>
-            </div>
-          </div>
+          <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col">
+      <div class="h-1 bg-gray-200 rounded overflow-hidden">
+        <div class="w-24 h-full bg-indigo-500"></div>
+      </div>
+      <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+        <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Space The Final Frontier</h1>
+        <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1203x503">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Shooting Stars</h2>
+        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
+        <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1204x504">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The Catalyzer</h2>
+        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
+        <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1205x505">
+        </div>
+        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The 400 Blows</h2>
+        <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
+        <a class="text-indigo-500 inline-flex items-center mt-3">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
           
           <!--Table-->
