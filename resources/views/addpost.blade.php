@@ -70,16 +70,15 @@
               </div>
               <div class="mb-4">
                 <label for="language" class="block text-gray-700 text-sm font-bold mb-2">Language</label>
-              <select name="language" id="language" class="w-80 rounded-lg">
-                <option value="">Select Language</option>
-                <option value="jv ">Javanese</option>
+              <select name="lang" id="lang" class="w-80 rounded-lg">
+                <option value="jv">Javanese</option>
                 <option value="su">Sundanese</option>
                 <option value="ms">Melayu</option>
               </select>
             </div>
               <div class="mb-4">
                 <label for="textbody" class="block text-gray-700 text-sm font-bold mb-2">Article</label>
-                <textarea name="textbody" id="textbody" cols="30" rows="10" placeholder="Article" class="shadow border rounded w-full text-gray-700 py-2 px-3 focus:outline-none focus:shadow-outline"></textarea>
+                <textarea name="artikel" id="artikel" cols="30" rows="10" placeholder="Article" class="shadow border rounded w-full text-gray-700 py-2 px-3 focus:outline-none focus:shadow-outline"></textarea>
             </div>
               <div class="flex items-center justify-end">
                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">

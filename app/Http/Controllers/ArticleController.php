@@ -16,14 +16,14 @@ class ArticleController extends Controller
         $request->validate([
             'title'=> 'required',
             'description'=> 'required',
-            'language'=> 'required',
+            'lang'=> 'required',
             'artikel'=> 'required',
         ]);
         article::create([
             'title' => $request['title'],
             'description' => $request['description'],
-            'language' => $request['language'],
-            'artikel' => $request['artikel']
+            'lang' => $request['lang'],
+            'artikel' => $request['artikel'],
         ]);
         return redirect()->route('admin')->with('success', 'Artikel Berhasil Ditambahkan');
 

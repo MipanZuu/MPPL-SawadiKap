@@ -10,13 +10,13 @@ class Article extends Model
 {
     use HasFactory;
     use Notifiable;
-    public $table = "article";
+    public $table = "articles";
     protected $primaryKey = 'id';
     
     protected $fillable = [
         'title',
         'description',
-        'language',
+        'lang',
         'artikel',
     ];
 }
