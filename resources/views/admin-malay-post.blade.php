@@ -40,9 +40,9 @@
   </div>
 
      <!-- NAVBAR-TOP -->
-  <div class="flex-auto">
+  <div class="flex-auto bg-gray-300">
         <div class="flex flex-col">
-          <div class="flex bg-gray-300 h-24 p-3 drop-shadow-2xl justify-center  sticky top-0">
+          <div class="flex bg-gray-300 h-24 p-3 drop-shadow-2xl justify-center sticky top-0">
             <div class="flex flex-row space-x-36">
             
               <div class="w-20 h-20">
@@ -67,7 +67,7 @@
         </div>
         
         <!-- SEARCH-->
-        <div class="bg-gray-300 min-h-screen align-items-lg-start">
+        <!-- <div class="bg-gray-300 min-h-screen align-items-lg-start">
           <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
           <form action="{{route('listmahasiswa')}}" method="GET" role='search'>
                     @csrf
@@ -78,64 +78,47 @@
                         </button>
                     </span>
                 </form>
+          </div> -->
+       
+          <div class="grid grid-cols-3 gap-3 p-0 m-8">
+            <div class="bg-white rounded-lg col-span-2 ...">
+              <div class="p-4">
+                <h1 class="font-bold text-xl mb-2 text-center">Contoh Judul</h1>
+              </div>
+              <img src="https://dummyimage.com/1201x501" class="card-img-top" alt="gambar" >
+              <div class="p-4">
+                  <!-- <h1 class="font-bold text-xl mb-2 text-center">Contoh Judul</h1> -->
+                  <p class="leading-relaxed text-base">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
+                    voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
+                    similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum 
+                    facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit 
+                    quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus 
+                    autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et 
+                    molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores 
+                    alias consequatur aut perferendis doloribus asperiores repellat.On the other hand, we denounce with righteous indignation 
+                    and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that 
+                    they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty 
+                    through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple 
+                    and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to 
+                    do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the 
+                    claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. 
+                    The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater 
+                    pleasures, or else he endures pains to avoid worse pains
+                </p>
+              </div>
+            </div>
+            <div> 
+              <div class="bg-white rounded-lg w-96 h-20 m-auto">
+                <center> 
+                      <a href="/admin-malay"> 
+                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg w-5/6 text-center m-5">
+                          Kembali
+                        </button>
+                      </a>
+                </center>
+              </div>
+            </div>
           </div>
-          
-
-
-
-    <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col">
-          <div class="h-1 bg-gray-200 rounded overflow-hidden">
-            <div class="w-24 h-full bg-indigo-500"></div>
-          </div>
-          <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-            <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Space The Final Frontier</h1>
-            <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
-          </div>
-      </div>
-      <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-          <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1203x503">
-          </div>
-          <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Shooting Stars</h2>
-          <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-          <a href="/admin-malay-post" class="text-indigo-500 inline-flex items-center mt-3">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-
-        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-          <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1204x504">
-          </div>
-          <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The Catalyzer</h2>
-            <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-            <a href="/admin-malay-post" class="text-indigo-500 inline-flex items-center mt-3">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
-        </div>
-
-        <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-          <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1205x505">
-          </div>
-          <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The 400 Blows</h2>
-          <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-          <a href="/admin-malay-post" class="text-indigo-500 inline-flex items-center mt-3">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
           
           <!--Table-->
