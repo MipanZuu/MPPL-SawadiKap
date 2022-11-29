@@ -128,7 +128,8 @@ class AdminController extends Controller
         return view('admin-malay');
     }
 
-    public function viewMalayAdminPost(){
+    public function viewMalayAdminPost()
+    {
         return view('admin-malay-post');
     }
 

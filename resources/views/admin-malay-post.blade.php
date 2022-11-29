@@ -108,7 +108,7 @@
               </div>
             </div>
             <div> 
-              <div class="bg-white rounded-lg w-96 h-20 m-auto">
+               <div class="bg-white rounded-lg w-96 h-20 m-auto">
                 <center> 
                       <a href="/admin-malay"> 
                         <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg w-5/6 text-center m-5">
