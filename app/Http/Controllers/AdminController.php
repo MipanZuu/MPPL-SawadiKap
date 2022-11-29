@@ -140,6 +140,20 @@ class AdminController extends Controller
         return view('admin-malay',['articles' => $articles]);
     }
 
+    public function viewJavaAdmin(Request $request)
+    {
+        $articles = DB::table('articles')->where([
+            ['lang','ms'],
+            [function ($query) use ($request) {
+                if (($term = $request->term)) {
+                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();
+                }
+            }]
+        ])->orderby('id','asc')->get();
+        
+        return view('admin-jawa',['articles' => $articles]);
+    }
+
     public function viewProfile()
     {
         return view('profile');
