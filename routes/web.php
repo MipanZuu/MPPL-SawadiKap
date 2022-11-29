@@ -11,6 +11,7 @@ use App\Http\Controllers\OrmawaController;
 use App\Http\Controllers\TahapController;
 use App\Http\Controllers\MhsormawaController;
 use App\Http\Controllers\ArticleController;
+use App\Models\Article;
 use Illuminate\Support\Facades\Request;
 /*
 |--------------------------------------------------------------------------
@@ -35,16 +36,18 @@ Route::post('/mahasiswa/{id}/delete', [AdminController::class, 'deleteMahasiswa'
 
 /* ADMIN ROUTES */
 Route::get('/login',[AdminController::class, 'loginpage'])->name('login');
+Route::get('/admin',[AdminController::class, 'index'])->name('admin');
 Route::get('/admin-malay',[AdminController::class, 'viewMalayAdmin'])->name('viewmalayadmin');
 Route::get('/admin-malay-post',[AdminController::class, 'viewMalayAdminPost'])->name('admin-malay-post');
 Route::get('/profile',[AdminController::class, 'viewProfile'])->name('viewProfile');
 Route::get('/addpostingadmin',[AdminController::class, 'addposting'])->name('addpostingadmin');
 Route::post('/addpostingadmin/add', [ArticleController::class, 'add_process_admin'])->name('addpostingadmin.post');
+Route::get('/posting/{id}',[ArticleController::class, 'getArticle'])->name('getArticleDetails');
 
 Route::get('/petunjuk/upload',[AdminController::class, 'uploadpetunjuk'])->name('uploadpetunjuk');
 Route::post('/petunjuk/upload/post',[AdminController::class, 'upload'])->name('petunjuk.post');
 Route::post('/loginUser',[AdminController::class, 'login'])->name('login.post');
-Route::get('/admin',[AdminController::class, 'index'])->name('admin');
+
 Route::post('/logout',[AdminController::class, 'logout'])->name('logout.post');
 Route::get('/listUser', [AdminController::class, 'listUser'])->name('listUser');
 Route::get('/tambahUser', [AdminController::class, 'tambahUser'])->name('tambahUser');

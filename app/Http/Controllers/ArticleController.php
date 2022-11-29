@@ -4,13 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\article;
+use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
-    public function show()
-    {
-        return "Artikel berhasil ditambahkan";
-    }
     public function add_process_admin(Request $request)
     {
         $request->validate([
@@ -27,5 +24,15 @@ class ArticleController extends Controller
         ]);
         return redirect()->route('admin')->with('success', 'Artikel Berhasil Ditambahkan');
 
+    }
+
+    public function getArticle($id){
+		$articels = article::where('id',$id)->first();
+        return view('isi-artikel',['articels' => $articels]);
+    }
+
+    public function getAllArticle(){
+        $data = article::select('*')->orderby('id','desc')->get();
+        return view('admin-malay',['articles' => $data]);
     }
 }

@@ -17,6 +17,8 @@ use App\Models\Kegiatan;
 use App\Models\Tahap;
 use App\Models\NilaiOrmawa;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Article;
+use Illuminate\Support\Facades\DB;
 use PDF;
 use Response;
 
@@ -123,14 +125,11 @@ class AdminController extends Controller
 
     }
     
+
     public function viewMalayAdmin()
     {
-        return view('admin-malay');
-    }
-
-    public function viewMalayAdminPost()
-    {
-        return view('admin-malay-post');
+        $articles = DB::table('articles')->where('lang','ms')->orderby('id','desc')->get();
+        return view('admin-malay',['articles' => $articles]);
     }
 
     public function viewProfile()
