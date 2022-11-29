@@ -126,9 +126,17 @@ class AdminController extends Controller
     }
     
 
-    public function viewMalayAdmin()
+    public function viewMalayAdmin(Request $request)
     {
-        $articles = DB::table('articles')->where('lang','ms')->orderby('id','desc')->get();
+        $articles = DB::table('articles')->where([
+            ['lang','ms'],
+            [function ($query) use ($request) {
+                if (($term = $request->term)) {
+                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();
+                }
+            }]
+        ])->orderby('id','asc')->get();
+        
         return view('admin-malay',['articles' => $articles]);
     }
 

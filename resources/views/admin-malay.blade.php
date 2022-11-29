@@ -69,7 +69,7 @@
         <!-- SEARCH-->
         <div class="bg-gray-300 min-h-screen align-items-lg-start">
           <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
-          <form action="{{route('listmahasiswa')}}" method="GET" role='search'>
+          <form action="{{route('viewmalayadmin')}}" method="GET" role='search'>
                     @csrf
                     <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Cari">
                     <span class="input-group-btn">
