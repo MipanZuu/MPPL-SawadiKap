@@ -143,7 +143,7 @@ class AdminController extends Controller
     public function viewJavaAdmin(Request $request)
     {
         $articles = DB::table('articles')->where([
-            ['lang','ms'],
+            ['lang','jv'],
             [function ($query) use ($request) {
                 if (($term = $request->term)) {
                     $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();

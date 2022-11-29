@@ -39,7 +39,6 @@ Route::get('/login',[AdminController::class, 'loginpage'])->name('login');
 Route::get('/admin',[AdminController::class, 'index'])->name('admin');
 Route::get('/admin-malay',[AdminController::class, 'viewMalayAdmin'])->name('viewmalayadmin');
 Route::get('/admin-jawa',[AdminController::class, 'viewJavaAdmin'])->name('viewJavaAdmin');
-Route::get('/admin-malay-post',[AdminController::class, 'viewMalayAdminPost'])->name('admin-malay-post');
 Route::get('/profile',[AdminController::class, 'viewProfile'])->name('viewProfile');
 Route::get('/addpostingadmin',[AdminController::class, 'addposting'])->name('addpostingadmin');
 Route::post('/addpostingadmin/add', [ArticleController::class, 'add_process_admin'])->name('addpostingadmin.post');

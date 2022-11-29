@@ -60,16 +60,24 @@
   
         <div class="flex bg-gray-300 h-12 p-2 drop-shadow-2xl justify-center sticky top-24">
           <div class="flex flex-row space-x-20">
-            <a href="{{route('viewmalayadmin')}}" class="pb-4">
-              <p class="font-regular text-black hover:text-pink-600 text-sm">Melayu</p>
-              </a>
+            <div class="flex flex-row space-x-20">
+              <a href="{{route('viewJavaAdmin')}}" class="pb-4">
+                <p class="font-regular text-black hover:text-pink-600 text-sm">Javanese</p>
+                </a>
+                <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
+                  <p class="font-regular text-black hover:text-pink-600 text-sm">Sundanese</p>
+                  </a>
+                  <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
+                    <p class="font-regular text-black hover:text-pink-600 text-sm">Betawinese</p>
+                    </a>
+            </div>
           </div>
         </div>
         
         <!-- SEARCH-->
         <div class="bg-gray-300 min-h-screen align-items-lg-start">
           <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
-          <form action="{{route('viewmalayadmin')}}" method="GET" role='search'>
+          <form action="{{route('viewJavaAdmin')}}" method="GET" role='search'>
                     @csrf
                     <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Cari">
                     <span class="input-group-btn">
