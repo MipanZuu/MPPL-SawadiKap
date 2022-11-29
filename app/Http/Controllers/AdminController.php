@@ -101,7 +101,7 @@ class AdminController extends Controller
     {
         if(Auth::check()){
             $user = Auth::user();
-            // $mahasiswas = Mahasiswa::count();
+            $users = User::count();
             // $panitias = Panitia::count();
             // $ormawas = Ormawa::count();
             // $kegiatanpanitias = KegiatanPanitia::count();

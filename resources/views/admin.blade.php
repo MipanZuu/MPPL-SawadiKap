@@ -89,29 +89,24 @@
           
 
 
-
-          <div class=" mt-5 grid lg:grid-cols-3  md:grid-cols-3 p-4 gap-3">
-            <div class="col-span-2 flex flex-col p-8 bg-white rounded-lg shadow-2xl">
-              <b class="flex flex-row text-gray-500"></b>
-              <canvas class="p-5" id="chartLine"></canvas>
+          <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
+              <div>
+                <div class="text-sm text-gray-400 ">Jumlah Users</div>
+                <div class="flex items-center pt-1">
+                  <div class="text-3xl font-medium text-gray-600 ">{{{Auth::user()->count()}}}</div>
+                </div>
+              </div>
+              <div class="text-pink-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
             </div>
 
-            <div class=" flex flex-col p-5 bg-white rounded-lg shadow-2xl">
-              <b class="flex flex-row text-gray-500"></b>
-              <canvas class="p-5" id="chartRadar"></canvas>
-            </div>
 
-            <div class=" flex flex-col p-5 bg-white rounded-lg shadow-2xl">
-              <b class="flex flex-row text-gray-500"></b>
-              <canvas class="p-5" id="chartRadar"></canvas>
-            </div>
-
-            <div class="col-span-2 flex flex-col p-8 bg-white rounded-lg shadow-2xl">
-              <b class="flex flex-row text-gray-500"></b>
-              <canvas class="p-5" id="chartLine"></canvas>
-            </div>
-          </div>
-
+            
           
           <!--Table-->
           <a href="{{route('addpostingadmin')}}">
