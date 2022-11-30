@@ -42,10 +42,14 @@ Route::get('/admin-jawa',[AdminController::class, 'viewJavaAdmin'])->name('viewJ
 Route::get('/profile',[AdminController::class, 'viewProfile'])->name('viewProfile');
 Route::get('/addpostingadmin',[AdminController::class, 'addposting'])->name('addpostingadmin');
 Route::post('/addpostingadmin/add', [ArticleController::class, 'add_process_admin'])->name('addpostingadmin.post');
+Route::get('/admin-manage-post',[AdminController::class, 'adminManagePost'])->name('admin-manage-post');
 Route::get('/admin-edit-post/{id}',[AdminController::class, 'adminEditPost'])->name('admin-edit-post');
 Route::post('/admin-edit-post/update', [ArticleController::class, 'edit_process_admin'])->name('editpostingadmin.post');
-Route::get('/admin-manage-post',[AdminController::class, 'adminManagePost'])->name('admin-manage-post');
+Route::post('/admin-manage-post/{id}/delete', [AdminController::class, 'deletePost'])->name('posting.delete');
 Route::get('/posting/{id}',[ArticleController::class, 'getArticle'])->name('getArticleDetails');
+
+
+
 
 Route::get('/petunjuk/upload',[AdminController::class, 'uploadpetunjuk'])->name('uploadpetunjuk');
 Route::post('/petunjuk/upload/post',[AdminController::class, 'upload'])->name('petunjuk.post');

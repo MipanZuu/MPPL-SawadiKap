@@ -187,6 +187,16 @@ class AdminController extends Controller
         return view('admin-edit-post',['articels' => $articels]);
     }
 
+
+    public function deletePost(Request $request){
+        $id = $request['id'];
+		if (article::where('id', '=', $id)->exists()) {
+            $articles = article::where('id',$id)->delete();
+            return redirect()->route('admin-manage-post')->with('success', 'Post Berhasil Dihapus');
+        }
+		return redirect('admin-manage-post')->withErrors('Post tidak ditemukan');
+    }
+
     
     public function login(Request $request){
        $request->validate([

@@ -119,9 +119,14 @@
                         <td class="border border-slate-700 py-4 px-6">
                           {{ $article -> description }} 
                         </td>
-                        <td  class="border border-slate-700 py-4 px-6  w-52">
+                        <td  class=" border border-slate-700 py-4 px-6  w-56">
+                          <div class="flex justify-evenly">
                           <a href="{{ route('admin-edit-post', $article->id) }}"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-3">Edit</button></a>
-                          <a href="/admin-malay"><button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Hapus</button></a>
+                          <form action="{{route('posting.delete',[$article->id])}}" method="post" onsubmit="return confirm('Apakah anda yakin akan menghapus Post ini?')">
+                           @csrf
+                            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-2 rounded">Hapus</button>
+                          </form>
+                        </div>
                         </td>
                         
                       </tr>  
