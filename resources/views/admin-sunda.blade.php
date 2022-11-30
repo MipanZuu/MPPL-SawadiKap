@@ -67,7 +67,7 @@
                 <a href="{{route('viewSundaAdmin')}}" class="pb-4">
                   <p class="font-regular text-black hover:text-pink-600 text-sm">Sundanese</p>
                   </a>
-                  
+                
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@
         <!-- SEARCH-->
         <div class="bg-gray-300 min-h-screen align-items-lg-start">
           <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
-          <form action="{{route('viewJavaAdmin')}}" method="GET" role='search'>
+          <form action="{{route('viewSundaAdmin')}}" method="GET" role='search'>
                     @csrf
                     <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Cari">
                     <span class="input-group-btn">
@@ -96,7 +96,7 @@
             <div class="w-24 h-full bg-indigo-500"></div>
           </div>
           <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-            <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Artikel kanggo sinau basa Jawa</h1>
+            <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Artikel pangajaran basa Sunda</h1>
 
           </div>
       </div>

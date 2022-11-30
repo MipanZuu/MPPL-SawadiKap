@@ -154,6 +154,20 @@ class AdminController extends Controller
         return view('admin-jawa',['articles' => $articles]);
     }
 
+    public function viewSundaAdmin(Request $request)
+    {
+        $articles = DB::table('articles')->where([
+            ['lang','su'],
+            [function ($query) use ($request) {
+                if (($term = $request->term)) {
+                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();
+                }
+            }]
+        ])->orderby('id','asc')->get();
+        
+        return view('admin-Sunda',['articles' => $articles]);
+    }
+
     public function viewProfile()
     {
         return view('profile');

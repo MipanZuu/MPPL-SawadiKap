@@ -70,7 +70,7 @@
             <a href="{{route('viewJavaAdmin')}}" class="pb-4">
               <p class="font-regular text-black hover:text-pink-600 text-sm">Javanese</p>
               </a>
-              <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
+              <a href="{{route('viewSundaAdmin')}}" class="pb-4">
                 <p class="font-regular text-black hover:text-pink-600 text-sm">Sundanese</p>
                 </a>
                 <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
