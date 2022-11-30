@@ -42,6 +42,7 @@ Route::get('/admin-jawa',[AdminController::class, 'viewJavaAdmin'])->name('viewJ
 Route::get('/profile',[AdminController::class, 'viewProfile'])->name('viewProfile');
 Route::get('/addpostingadmin',[AdminController::class, 'addposting'])->name('addpostingadmin');
 Route::post('/addpostingadmin/add', [ArticleController::class, 'add_process_admin'])->name('addpostingadmin.post');
+Route::get('/admin-edit-post',[AdminController::class, 'AdminEditPost'])->name('admin-edit-post');
 Route::get('/posting/{id}',[ArticleController::class, 'getArticle'])->name('getArticleDetails');
 
 Route::get('/petunjuk/upload',[AdminController::class, 'uploadpetunjuk'])->name('uploadpetunjuk');
