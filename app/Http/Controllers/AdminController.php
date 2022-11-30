@@ -166,6 +166,10 @@ class AdminController extends Controller
     public function addposting(){
         return view('addpost');
     }
+    public function AdminEditPost()
+    {
+        return view('admin-edit-post');
+    }
 
     
     public function login(Request $request){
