@@ -166,9 +166,25 @@ class AdminController extends Controller
     public function addposting(){
         return view('addpost');
     }
-    public function AdminEditPost()
+
+
+    public function adminManagePost(Request $request)
     {
-        return view('admin-edit-post');
+
+        $articles = DB::table('articles')->where([
+            [function ($query) use ($request) {
+                if (($term = $request->term)) {
+                    $query->orWhere('lang','LIKE','%'. $term .'%')->get();
+                }
+            }]
+        ])->orderby('id','asc')->get();
+        return view('admin-manage-post',['articles' => $articles]);
+    }
+
+
+    public function adminEditPost($id){
+        $articels = article::where('id',$id)->first();
+        return view('admin-edit-post',['articels' => $articels]);
     }
 
     

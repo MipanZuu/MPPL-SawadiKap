@@ -103,8 +103,8 @@
           </div>
       </div>
       <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+        @foreach ($articles as $article)
         <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-          @foreach ($articles as $article)
           <div class="rounded-lg h-64 overflow-hidden">
             <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1203x503">
           </div>
@@ -116,9 +116,9 @@
             </svg>
           </a>
         </div>
-
         @endforeach
       </div>
+      
     </div>
   </section>
 

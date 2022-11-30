@@ -10,6 +10,11 @@
                 <img src="/pictures/explore.png" alt="">
             </div>
         </a>
+        <a href="{{route('admin-manage-post')}}">
+          <div class="flex justify-center mt-8">
+            <img class="object-scale-down h-8 w-8" src="/pictures/list-blue.png" alt="">
+                </div>
+            </a>
         <form action="{{route('backup')}}" method="POST">
             @csrf
             <div class="flex justify-center mt-8">
