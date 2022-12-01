@@ -12,6 +12,11 @@
           <img src="/pictures/explore.png" alt="">
         </div>
       </a>
+      <a href="{{route('admin-manage-post')}}">
+        <div class="flex justify-center mt-8">
+          <img class="object-scale-down h-10 w-10" src="/pictures/admin1.png" alt="">
+              </div>
+          </a>
       <form action="{{route('backup')}}" method="POST">
           @csrf
         <div class="flex justify-center mt-8">
@@ -72,7 +77,7 @@
           </div> -->
 
           <div>
-            <h1 class="text-2xl font-medium"><center>List Artikel</center></h1>
+            <h1 class="text-2xl font-medium"><center>Article List</center></h1>
           </div>
           
           <div class="overflow-x-auto relative shadow-md rounded-lg bg-white p-7 m-5">
@@ -87,7 +92,7 @@
             </select>
           {{-- </form> --}}
           </div>
-          <a href="/"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-5">Article Request</button></a>
+          <a href="/"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-5">Article Edit Request</button></a>
           </div>
             
             <table class="w-full text-sm text-left text-gray-900 border-collapse border border-slate-500">
@@ -97,13 +102,13 @@
                             No
                         </th>
                         <th class="border border-slate-700 py-3 px-6"scope="col">
-                            Judul
+                            Title
                         </th>
                         <th class="border border-slate-700 py-3 px-6"scope="col">
-                            Deskripsi
+                            Description
                         </th>
                         <th class="border border-slate-700 py-3 px-6"scope="col">
-                            Aksi
+                            Action
                         </th>
                     </tr>
                 </thead>

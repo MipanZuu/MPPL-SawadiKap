@@ -102,12 +102,13 @@ class AdminController extends Controller
         if(Auth::check()){
             $user = Auth::user();
             $users = User::count();
+            $post = article::count();
             // $panitias = Panitia::count();
             // $ormawas = Ormawa::count();
             // $kegiatanpanitias = KegiatanPanitia::count();
             // $kegiatans = Kegiatan::count();
             if ($user->role == 'Admin'){
-                return view('admin');
+                return view('admin.admin',compact('post'));
             }
             else if($user->role == 'User'){
                 return redirect('ormawa');
@@ -137,7 +138,7 @@ class AdminController extends Controller
             }]
         ])->orderby('id','asc')->get();
         
-        return view('admin-malay',['articles' => $articles]);
+        return view('admin.admin-malay',['articles' => $articles]);
     }
 
     public function viewJavaAdmin(Request $request)
@@ -151,7 +152,7 @@ class AdminController extends Controller
             }]
         ])->orderby('id','asc')->get();
         
-        return view('admin-jawa',['articles' => $articles]);
+        return view('admin.admin-jawa',['articles' => $articles]);
     }
 
     public function viewSundaAdmin(Request $request)
@@ -165,7 +166,7 @@ class AdminController extends Controller
             }]
         ])->orderby('id','asc')->get();
         
-        return view('admin-Sunda',['articles' => $articles]);
+        return view('admin.admin-Sunda',['articles' => $articles]);
     }
 
     public function viewProfile()
@@ -174,11 +175,11 @@ class AdminController extends Controller
     }
 
     public function viewIndoAdmin(){
-        return view('admin');
+        return view('admin.admin');
     }
 
     public function addposting(){
-        return view('addpost');
+        return view('admin.addpost');
     }
 
 
@@ -192,13 +193,13 @@ class AdminController extends Controller
                 }
             }]
         ])->orderby('id','asc')->get();
-        return view('admin-manage-post',['articles' => $articles]);
+        return view('admin.admin-manage-post',['articles' => $articles]);
     }
 
 
     public function adminEditPost($id){
         $articels = article::where('id',$id)->first();
-        return view('admin-edit-post',['articels' => $articels]);
+        return view('admin.admin-edit-post',['articels' => $articels]);
     }
 
 
@@ -206,9 +207,9 @@ class AdminController extends Controller
         $id = $request['id'];
 		if (article::where('id', '=', $id)->exists()) {
             $articles = article::where('id',$id)->delete();
-            return redirect()->route('admin-manage-post')->with('success', 'Post Berhasil Dihapus');
+            return redirect()->route('admin.admin-manage-post')->with('success', 'Post Berhasil Dihapus');
         }
-		return redirect('admin-manage-post')->withErrors('Post tidak ditemukan');
+		return redirect('admin.admin-manage-post')->withErrors('Post tidak ditemukan');
     }
 
     

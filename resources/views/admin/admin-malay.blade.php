@@ -12,6 +12,11 @@
           <img src="/pictures/explore.png" alt="">
         </div>
       </a>
+      <a href="{{route('admin-manage-post')}}">
+        <div class="flex justify-center mt-8">
+          <img class="object-scale-down h-10 w-10" src="/pictures/admin1.png" alt="">
+              </div>
+          </a>
       <form action="{{route('backup')}}" method="POST">
           @csrf
         <div class="flex justify-center mt-8">
@@ -84,13 +89,13 @@
 
 
     <section class="text-gray-600 body-font">
-      <div class="container px-5 py-24 mx-auto">
+      <div class="container px-5 py-5 mx-auto">
         <div class="flex flex-col">
           <div class="h-1 bg-gray-200 rounded overflow-hidden">
             <div class="w-24 h-full bg-indigo-500"></div>
           </div>
           <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-            <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Article to Learn Melayu Language</h1>
+            <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Artikel Belajar Bahasa Melayu</h1>
 
           </div>
       </div>

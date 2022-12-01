@@ -12,7 +12,7 @@
         </a>
         <a href="{{route('admin-manage-post')}}">
           <div class="flex justify-center mt-8">
-            <img class="object-scale-down h-8 w-8" src="/pictures/list-blue.png" alt="">
+            <img class="object-scale-down h-10 w-10" src="/pictures/admin1.png" alt="">
                 </div>
             </a>
         <form action="{{route('backup')}}" method="POST">
@@ -73,14 +73,12 @@
               <a href="{{route('viewSundaAdmin')}}" class="pb-4">
                 <p class="font-regular text-black hover:text-pink-600 text-sm">Sundanese</p>
                 </a>
-                <a href="{{route('listkegiatanpanitia')}}" class="pb-4">
-                  <p class="font-regular text-black hover:text-pink-600 text-sm">Betawinese</p>
-                  </a>
           </div>
         </div>
         
         <div class="bg-gray-300 min-h-screen align-items-lg-start">
-          <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
+
+          {{-- <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
           <form action="{{route('listmahasiswa')}}" method="GET" role='search'>
                     @csrf
                     <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Search">
@@ -90,26 +88,85 @@
                         </button>
                     </span>
                 </form>
-          </div>
-          
+          </div> --}}
+        
+
+            
 
 
-          <div class="flex items-center justify-between p-5 bg-white rounded shadow-sm">
-              <div>
-                <div class="text-sm text-gray-400 ">Jumlah Users</div>
-                <div class="flex items-center pt-1">
-                  <div class="text-3xl font-medium text-gray-600 ">{{{Auth::user()->count()}}}</div>
+            <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
+              <!--Grid starts here-->
+              
+              <!-- Grid ends here..-->
+  
+  
+              <div class="flex items-center justify-between p-5 mt-10 bg-white rounded shadow-sm">
+                <div>
+                  <div class="text-sm text-gray-400 ">Jumlah Users</div>
+                  <div class="flex items-center pt-1">
+                    <div class="text-3xl font-medium text-gray-600 ">{{{Auth::user()->count()}}}</div>
+                  </div>
+                </div>
+                <div class="text-pink-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
                 </div>
               </div>
-              <div class="text-pink-500">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
-                    clip-rule="evenodd" />
-                </svg>
-              </div>
-            </div>
 
+              <div class="flex items-center justify-between p-5 mt-10 bg-white rounded shadow-sm">
+                <div>
+                  <div class="text-sm text-gray-400 ">Jumlah Users</div>
+                  <div class="flex items-center pt-1">
+                    <div class="text-3xl font-medium text-gray-600 ">{{{Auth::user()->count()}}}</div>
+                  </div>
+                </div>
+                <div class="text-pink-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between p-5 mt-10 bg-white rounded shadow-sm">
+                <div>
+                  <div class="text-sm text-gray-400 ">Jumlah Posts</div>
+                  <div class="flex items-center pt-1">
+                    <div class="text-3xl font-medium text-gray-600 ">{{{$post}}}</div>
+                  </div>
+                </div>
+                <div class="text-pink-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between p-5 mt-10 bg-white rounded shadow-sm">
+                <div>
+                  <div class="text-sm text-gray-400 ">Jumlah Users</div>
+                  <div class="flex items-center pt-1">
+                    <div class="text-3xl font-medium text-gray-600 ">{{{Auth::user()->count()}}}</div>
+                  </div>
+                </div>
+                <div class="text-pink-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+
+
+  
+            </div>
 
             
           
