@@ -48,8 +48,5 @@ class ArticleController extends Controller
         return view('isi-artikel',['articels' => $articels]);
     }
 
-    public function getAllArticle(){
-        $data = article::select('*')->orderby('id','desc')->get();
-        return view('admin-malay',['articles' => $data]);
-    }
+   
 }
