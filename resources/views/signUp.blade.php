@@ -51,7 +51,7 @@
         </div >
         <label class="font-semibold mt-5 pr-40 pl-8 text-xl text-grayCerebrum" for=""></label>
                 <select name="role" id="role" class="w-40 rounded-lg">
-                  <option value="User">User</option>
+                  <option value="Community">Community</option>
                 </select>
         <button type="submit" class="mt-10 text-white text-m bg-red-600 w-32 h-10 rounded-full">Sign Up</button>
       </form>
