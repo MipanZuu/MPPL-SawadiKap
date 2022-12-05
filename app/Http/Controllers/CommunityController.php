@@ -36,4 +36,18 @@ class CommunityController extends Controller
         return view('community.community-Sunda',['articles' => $articles]);
     }
 
+    public function viewMalayCommunity(Request $request)
+    {
+        $articles = DB::table('articles')->where([
+            ['lang','ms'],
+            [function ($query) use ($request) {
+                if (($term = $request->term)) {
+                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();
+                }
+            }]
+        ])->orderby('id','asc')->get();
+        
+        return view('community.community-malay',['articles' => $articles]);
+    }
+
 }

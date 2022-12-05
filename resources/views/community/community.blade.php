@@ -44,7 +44,7 @@
           <div class="flex flex-row space-x-36">
           
           <div class="w-20 h-20">
-            <a href="{{route('viewmalayadmin')}}"><img src="/pictures/malaysia.png" class="w-20" alt="">
+            <a href="{{route('viewMalayCommunity')}}"><img src="/pictures/malaysia.png" class="w-20" alt="">
             </a>
         </div>
         <div class="w-20 h-20">

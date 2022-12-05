@@ -1,32 +1,44 @@
-@extends('layouts.normalUser')
+@extends('layouts.admin')
 @section('content')
 
-<div class="flex flex-col mt-64">
-    <a href="{{route('community')}}">
-    <div class="flex justify-center mt-2">
-              <img src="/pictures/home.png" alt="">
-          </div> 
-    <a href="{{route('uploadpetunjuk')}}">
-    <div class="flex justify-center mt-8">
-              <img src="/pictures/explore.png" alt="">
-          </div>
+  <div class="flex flex-col mt-64">
+      <a href="{{route('admin')}}">
+        <div class="flex justify-center mt-2">
+          <img src="/pictures/home.png" alt="">
+        </div> 
       </a>
+      <a href="{{route('uploadpetunjuk')}}">
+        <div class="flex justify-center mt-8">
+          <img src="/pictures/explore.png" alt="">
+        </div>
+      </a>
+      <a href="{{route('admin-manage-post')}}">
+        <div class="flex justify-center mt-8">
+          <img class="object-scale-down h-10 w-10" src="/pictures/admin1.png" alt="">
+              </div>
+          </a>
       <form action="{{route('backup')}}" method="POST">
           @csrf
-          <div class="flex justify-center mt-8">
-              <img src="/pictures/book.png" alt="">
-          </div>
+        <div class="flex justify-center mt-8">
+          <img src="/pictures/book.png" alt="">
+        </div>
       </form>
 
+  {{-- <form action="{{route('backup')}}" method="POST">
+          @csrf
+          <div class="flex justify-center mt-8">
+            <img src="/pictures/Add.png" alt="">
+          </div>
+        </form> --}}
 
         <form action="{{route('logout.post')}}" method="POST">
           @csrf
           <div class="flex justify-center mt-8">
-              <button type="submit" class="text-white text-xs bg-red-500 w-24 h-7 rounded-full">Metuo Cokk !!</button>
+              <button type="submit" class="text-white text-xs bg-red-500 w-24 h-7 rounded-full">Keluar</button>
           </div>
         </form>
         <div class="text-sm opacity-30 px-22 text-center mt-36 sticky">
-          Sawadikap 2022. Hak cipta
+          Sawadikap 2022. Hak cipta terpelihara
         </div>
       </div>
     </div>
@@ -42,7 +54,7 @@
                 <a href="{{route('viewMalayCommunity')}}"><img src="/pictures/malaysia.png" class="w-20" alt=""></a>
               </div>
               <div class="w-20 h-20">
-                <a href="{{ route('community') }}"><img src="/pictures/indonesia.png" class="w-20" alt="">
+                <a href="{{ route('admin') }}"><img src="/pictures/indonesia.png" class="w-20" alt="">
                 </a>
               </div>
             </div>
@@ -53,22 +65,16 @@
   
         <div class="flex bg-gray-300 h-12 p-2 drop-shadow-2xl justify-center sticky top-24">
           <div class="flex flex-row space-x-20">
-            <div class="flex flex-row space-x-20">
-              <a href="" class="pb-4">
-                <p class="font-regular text-black hover:text-pink-600 text-sm">Javanese</p>
-                </a>
-                <a href="{{route('viewSundaCommunity')}}" class="pb-4">
-                  <p class="font-regular text-black hover:text-pink-600 text-sm">Sundanese</p>
-                  </a>
-                
-            </div>
+            <a href="{{route('viewMalayCommunity')}}" class="pb-4">
+              <p class="font-regular text-black hover:text-pink-600 text-sm">Melayu</p>
+              </a>
           </div>
         </div>
         
         <!-- SEARCH-->
         <div class="bg-gray-300 min-h-screen align-items-lg-start">
           <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
-          <form action="{{route('viewSundaCommunity')}}" method="GET" role='search'>
+          <form action="{{route('viewmalayadmin')}}" method="GET" role='search'>
                     @csrf
                     <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Cari">
                     <span class="input-group-btn">
@@ -89,7 +95,7 @@
             <div class="w-24 h-full bg-indigo-500"></div>
           </div>
           <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-            <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Artikel pangajaran basa Sunda</h1>
+            <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Artikel Belajar Bahasa Melayu</h1>
 
           </div>
       </div>
@@ -109,7 +115,6 @@
         </div>
         @endforeach
       </div>
-      
     </div>
   </section>
 
