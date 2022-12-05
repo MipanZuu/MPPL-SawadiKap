@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MahasiswaController;
@@ -48,6 +49,12 @@ Route::post('/admin-edit-post/update', [ArticleController::class, 'edit_process_
 Route::post('/admin-manage-post/{id}/delete', [AdminController::class, 'deletePost'])->name('posting.delete');
 Route::get('/posting/{id}',[ArticleController::class, 'getArticle'])->name('getArticleDetails');
 Route::get('/admin-sunda',[AdminController::class, 'viewSundaAdmin'])->name('viewSundaAdmin');
+
+
+Route::get('/community',[CommunityController::class, 'index'])->name('community');
+
+
+
 
 
 

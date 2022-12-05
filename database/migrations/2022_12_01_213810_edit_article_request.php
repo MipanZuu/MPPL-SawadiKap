@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('editrequest', function (Blueprint $table) {
             $table->id('id');
+            $table->unsignedInteger('post_id');
             $table->string('title');
             $table->text('description');
             $table->string('lang');

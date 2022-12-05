@@ -114,7 +114,7 @@ class AdminController extends Controller
                 return redirect('ormawa');
             }
             if($user->role == 'Community'){
-                return redirect('panitia');
+                return redirect('community');
             }
         }
         return redirect('welcome');

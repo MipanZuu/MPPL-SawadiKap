@@ -12,6 +12,7 @@ class editrequest extends Model
     protected $primaryKey = 'id';
     
     protected $fillable = [
+        'post_id',
         'title',
         'description',
         'lang',
