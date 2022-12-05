@@ -62,7 +62,7 @@
             </div>
           </div>
           <div> 
-             <div class="bg-white rounded-lg w-96 h-40 m-auto">
+             <div class="bg-white rounded-lg w-96 h-20 m-auto">
               <center> 
                     <a href="{{ URL::previous() }}"> 
                       <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg w-5/6 text-center m-5">
@@ -70,15 +70,20 @@
                       </button>
                     </a>
               </center>
-              <center> 
-                <a href=""> 
-                  <button class="bg-blue-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg w-5/6 text-center m-5">
-                    Edit Request
-                  </button>
-                </a>
-          </center>
+              
             </div>
-
+            @if(Auth::user()->role=='Community')
+            <div class="bg-white rounded-lg w-96 h-20 m-auto mt-5">
+            <center> 
+              <a href=""> 
+                <button class="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg w-5/6 text-center m-5">
+                  Edit Request
+                </button>
+              </a>
+        </center>
+       
+      </div>
+      @endif
     
             
           </div>

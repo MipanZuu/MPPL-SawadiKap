@@ -48,7 +48,7 @@
           <div class="flex justify-center bg-gray-300 h-24 p-3 drop-shadow-2xl  top-0">
             <div class="flex flex-col space-x-3">
 
-                <h4 class="font-bold text-black mt-7  text-xl">Upload Post</h4>
+                <h4 class="font-bold text-black mt-7  text-xl">Edit Post</h4>
     
               </div>
           </div>
@@ -74,14 +74,7 @@
                   <label for="description" class="block text-gray-700 text-sm font-bold mb-2">Description</label>
                   <textarea  name="description" id="description" cols="30" rows="10" placeholder="Description" class="shadow border rounded w-full text-gray-700 py-2 px-3 focus:outline-none focus:shadow-outline">{{$articels->description}}</textarea>
               </div>
-              <div class="mb-4">
-                <label for="language" class="block text-gray-700 text-sm font-bold mb-2">Language</label>
-              <select name="lang" id="lang" class="w-80 rounded-lg">
-                <option value="jv">Javanese</option>
-                <option value="su">Sundanese</option>
-                <option value="ms">Melayu</option>
-              </select>
-            </div>
+              <input type="hidden" id="lang" name="lang" value="{{$articels->lang}}">
               <div class="mb-4">
                 <label for="textbody" class="block text-gray-700 text-sm font-bold mb-2">Article</label>
                 <textarea  name="artikel" id="artikel" cols="30" rows="10" placeholder="Article" class="shadow border rounded w-full text-gray-700 py-2 px-3 focus:outline-none focus:shadow-outline">{{$articels->artikel}}</textarea>
