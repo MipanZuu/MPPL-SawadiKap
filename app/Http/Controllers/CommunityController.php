@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\article;
+use Illuminate\Support\Facades\DB;
 
 class CommunityController extends Controller
 {
@@ -21,10 +22,18 @@ class CommunityController extends Controller
         
     }
 
-    public function loginpage()
+    public function viewSundaCommunity(Request $request)
     {
-        return view('welcome');
-
+        $articles = DB::table('articles')->where([
+            ['lang','su'],
+            [function ($query) use ($request) {
+                if (($term = $request->term)) {
+                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();
+                }
+            }]
+        ])->orderby('id','asc')->get();
+        
+        return view('community.community-Sunda',['articles' => $articles]);
     }
 
 }

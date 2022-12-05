@@ -49,10 +49,7 @@
             class="pl-8 border-b-10 rounded-xl border-primarycolor text-lg"
           />
         </div >
-        <label class="font-semibold mt-5 pr-40 pl-8 text-xl text-grayCerebrum" for=""></label>
-                <select name="role" id="role" class="w-40 rounded-lg">
-                  <option value="Community">Community</option>
-                </select>
+                <input type="hidden" name="role" id="role" value="Community">
         <button type="submit" class="mt-10 text-white text-m bg-red-600 w-32 h-10 rounded-full">Sign Up</button>
       </form>
     </div>

@@ -65,7 +65,7 @@
             <a href="" class="pb-4">
               <p class="font-regular text-black hover:text-pink-600 text-sm">Javanese</p>
               </a>
-              <a href="" class="pb-4">
+              <a href="{{ route('viewSundaCommunity') }}" class="pb-4">
                 <p class="font-regular text-black hover:text-pink-600 text-sm">Sundanese</p>
                 </a>
           </div>
