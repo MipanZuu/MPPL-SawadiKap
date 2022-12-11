@@ -54,6 +54,7 @@ Route::get('/admin-sunda',[AdminController::class, 'viewSundaAdmin'])->name('vie
 Route::get('/community',[CommunityController::class, 'index'])->name('community');
 Route::get('/community-sunda',[CommunityController::class, 'viewSundaCommunity'])->name('viewSundaCommunity');
 Route::get('/community-malay',[CommunityController::class, 'viewMalayCommunity'])->name('viewMalayCommunity');
+Route::get('/community-jawa',[CommunityController::class, 'viewJawaCommunity'])->name('viewJawaCommunity');
 
 
 
