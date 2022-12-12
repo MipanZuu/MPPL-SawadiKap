@@ -70,7 +70,8 @@
           <div class="overflow-x-auto relative shadow-md rounded-lg bg-white p-7 m-5">
             <div class="flex flex-row justify-between">
             <div class="mb-4">
-          <form action="">
+          <form method="get" action="{{ route('admin-manage-post') }}">
+            @csrf
             <select name="lang" id="lang" class="w-40 rounded-lg">
               <option value="jv">Javanese</option>
               <option value="su">Sundanese</option>
