@@ -83,14 +83,13 @@
           <div class="overflow-x-auto relative shadow-md rounded-lg bg-white p-7 m-5">
             <div class="flex flex-row justify-between">
             <div class="mb-4">
-              {{-- <form action="{{route('viewmalayadmin')}}"> --}}
-                {{-- @csrf --}}
+          <form action="{{route('viewmalayadmin')}}">
             <select name="lang" id="lang" class="w-40 rounded-lg">
               <option value="jv">Javanese</option>
               <option value="su">Sundanese</option>
               <option value="ms">Melayu</option>
             </select>
-          {{-- </form> --}}
+          </form>
           </div>
           <a href="/"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-5">Article Edit Request</button></a>
           </div>
