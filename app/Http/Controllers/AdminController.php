@@ -133,10 +133,12 @@ class AdminController extends Controller
             ['lang','ms'],
             [function ($query) use ($request) {
                 if (($term = $request->term)) {
-                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();
+                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->paginate(10);
                 }
             }]
-        ])->orderby('id','asc')->get();
+        ])->orderby('id','asc')->paginate(10);
+
+       
         
         return view('admin.admin-malay',['articles' => $articles]);
     }
