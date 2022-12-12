@@ -12,11 +12,6 @@
           <img src="/pictures/explore.png" alt="">
         </div>
       </a>
-      <a href="{{route('admin-manage-post')}}">
-        <div class="flex justify-center mt-8">
-          <img class="object-scale-down h-10 w-10" src="/pictures/admin1.png" alt="">
-              </div>
-          </a>
       <form action="{{route('backup')}}" method="POST">
           @csrf
         <div class="flex justify-center mt-8">
@@ -115,6 +110,14 @@
         </div>
         @endforeach
       </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+            {{ $articles->links('pagination::tailwind') }}
+        </div>
+    </div>
+    </div>
+    </div>
     </div>
   </section>
 
