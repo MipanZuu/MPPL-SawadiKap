@@ -48,5 +48,10 @@ class ArticleController extends Controller
         return view('isi-artikel',['articels' => $articels]);
     }
 
+    public function getLanguage($lang){
+		$articels = article::where('lang',$lang)->first();
+        return view('isi-artikel',['articels' => $articels]);
+    }
+
    
 }

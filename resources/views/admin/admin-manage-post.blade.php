@@ -62,19 +62,6 @@
           </div>
         </div>
         
-        <!-- SEARCH-->
-        <!-- <div class="bg-gray-300 min-h-screen align-items-lg-start">
-          <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
-          <form action="{{route('listmahasiswa')}}" method="GET" role='search'>
-                    @csrf
-                    <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Cari">
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-default ml-3">
-                            <img class="w-5 " src="pictures/search_grey.png" alt="">
-                        </button>
-                    </span>
-                </form>
-          </div> -->
 
           <div>
             <h1 class="text-2xl font-medium"><center>Article List</center></h1>
@@ -83,14 +70,14 @@
           <div class="overflow-x-auto relative shadow-md rounded-lg bg-white p-7 m-5">
             <div class="flex flex-row justify-between">
             <div class="mb-4">
-              {{-- <form action="{{route('viewmalayadmin')}}"> --}}
-                {{-- @csrf --}}
+          <form method="get" action="{{ route('admin-manage-post') }}">
+            @csrf
             <select name="lang" id="lang" class="w-40 rounded-lg">
               <option value="jv">Javanese</option>
               <option value="su">Sundanese</option>
               <option value="ms">Melayu</option>
             </select>
-          {{-- </form> --}}
+          </form>
           </div>
           <a href="/"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-5">Article Edit Request</button></a>
           </div>
