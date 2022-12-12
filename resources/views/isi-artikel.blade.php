@@ -72,18 +72,6 @@
               </center>
               
             </div>
-            @if(Auth::user()->role=='Community')
-            <div class="bg-white rounded-lg w-96 h-20 m-auto mt-5">
-            <center> 
-              <a href=""> 
-                <button class="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg w-5/6 text-center m-5">
-                  Edit Request
-                </button>
-              </a>
-        </center>
-       
-      </div>
-      @endif
     
             
           </div>
@@ -108,21 +96,6 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-        
-        <!-- SEARCH-->
-        <!-- <div class="bg-gray-300 min-h-screen align-items-lg-start">
-          <div class="grid lg:grid-cols-2 sm:grid-cols-2 p-4 gap-10">
-          <form action="{{route('listmahasiswa')}}" method="GET" role='search'>
-                    @csrf
-                    <input class="rounded-lg h-9 w-64 pl-10" type="text" name="term" id="term" placeholder="Cari">
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-default ml-3">
-                            <img class="w-5 " src="pictures/search_grey.png" alt="">
-                        </button>
-                    </span>
-                </form>
-          </div> -->
        
          
           
