@@ -62,12 +62,17 @@
               <img src="/pictures/account.png" class="fixed z-90 top-2 right-3  w-20 h-20 rounded-full drop-shadow-lg flex justify-center items-center text-white text-4xl hover:bg-blue-300 hover:drop-shadow-2xl hover:animate-bounce duration-300" alt="">
               </a>         
         </div>
-  
+
         <div class="flex bg-gray-300 h-12 p-2 drop-shadow-2xl justify-center sticky top-24">
           <div class="flex flex-row space-x-20">
-            <a href="{{route('viewmalayadmin')}}" class="pb-4">
-              <p class="font-regular text-black hover:text-pink-600 text-sm">Melayu</p>
-              </a>
+            <div class="flex flex-row space-x-20">
+              <a href="{{route('viewJavaAdmin')}}" class="pb-4">
+                <p class="font-regular text-black hover:text-pink-600 text-sm">Javanese</p>
+                </a>
+                <a href="{{route('viewSundaAdmin')}}" class="pb-4">
+                  <p class="font-regular text-black hover:text-pink-600 text-sm">Sundanese</p>
+                </a>
+            </div>
           </div>
         </div>
         

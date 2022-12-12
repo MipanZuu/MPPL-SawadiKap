@@ -71,8 +71,7 @@
                 </a>
                 <a href="{{route('viewSundaAdmin')}}" class="pb-4">
                   <p class="font-regular text-black hover:text-pink-600 text-sm">Sundanese</p>
-                  </a>
-                  
+                </a>
             </div>
           </div>
         </div>
