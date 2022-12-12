@@ -51,6 +51,8 @@ Route::post('/admin-manage-post/{id}/delete', [AdminController::class, 'deletePo
 Route::get('/posting/{id}',[ArticleController::class, 'getArticle'])->name('getArticleDetails');
 Route::get('/admin-sunda',[AdminController::class, 'viewSundaAdmin'])->name('viewSundaAdmin');
 
+Route::get('/posting/{id}',[ArticleController::class, 'getArticle'])->name('getArticleDetails');
+
 
 Route::get('/community',[CommunityController::class, 'index'])->name('community');
 Route::get('/community-sunda',[CommunityController::class, 'viewSundaCommunity'])->name('viewSundaCommunity');
