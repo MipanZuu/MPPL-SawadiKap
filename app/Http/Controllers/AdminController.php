@@ -18,6 +18,7 @@ use App\Models\Tahap;
 use App\Models\NilaiOrmawa;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Article;
+use App\Models\Topic;
 use Illuminate\Support\Facades\DB;
 use PDF;
 use Response;
@@ -212,6 +213,12 @@ class AdminController extends Controller
             return redirect()->route('admin.admin-manage-post')->with('success', 'Post Berhasil Dihapus');
         }
 		return redirect('admin.admin-manage-post')->withErrors('Post tidak ditemukan');
+    }
+
+    public function RequestedTopics(){
+        return view('admin.admin-topic',[
+            "topics" => Topic::all()
+        ]);
     }
 
     

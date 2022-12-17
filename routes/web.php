@@ -50,6 +50,7 @@ Route::post('/admin-edit-post/update', [ArticleController::class, 'edit_process_
 Route::post('/admin-manage-post/{id}/delete', [AdminController::class, 'deletePost'])->name('posting.delete');
 Route::get('/posting/{id}',[ArticleController::class, 'getArticle'])->name('getArticleDetails');
 Route::get('/admin-sunda',[AdminController::class, 'viewSundaAdmin'])->name('viewSundaAdmin');
+Route::get('/requestedtopics',[AdminController::class, 'RequestedTopics'])->name('RequestedTopics');
 
 // Route::get('/admin-manage-post/{lang}',[ArticleController::class, 'getLanguage'])->name('getLanguage');
 
@@ -58,7 +59,8 @@ Route::get('/community',[CommunityController::class, 'index'])->name('community'
 Route::get('/community-sunda',[CommunityController::class, 'viewSundaCommunity'])->name('viewSundaCommunity');
 Route::get('/community-malay',[CommunityController::class, 'viewMalayCommunity'])->name('viewMalayCommunity');
 Route::get('/community-jawa',[CommunityController::class, 'viewJawaCommunity'])->name('viewJawaCommunity');
-
+Route::get('/addtopiccommunity',[CommunityController::class, 'addTopicCommunity'])->name('addTopicCommunity');
+Route::post('/addtopiccommunity',[CommunityController::class, 'addTopic'])->name('addTopicCommunity');
 
 
 

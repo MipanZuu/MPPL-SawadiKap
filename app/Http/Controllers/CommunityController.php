@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\article;
+use App\Models\Topic;
 use Illuminate\Support\Facades\DB;
 
 class CommunityController extends Controller
@@ -62,6 +63,22 @@ class CommunityController extends Controller
         ])->orderby('id','asc')->get();
         
         return view('community.community-jawa',['articles' => $articles]);
+    }
+
+    public function addTopicCommunity(){
+
+        return view('community.addTopic');
+    }
+
+    public function addTopic(Request $request){
+           
+        $topic = $request->validate([
+            'topic'=> 'required'
+        ]);
+        Topic::create($topic);
+        return redirect()->route('community')->with('success', 'Topic Berhasil Ditambahkan');
+
+        
     }
 
 }
