@@ -10,7 +10,7 @@ class Topic extends Model
     use HasFactory;
     public $timestamps = false;
     protected $primaryKey = 'id';
-    protected $fillable =['id','status'];
+    protected $fillable =['topic','status'];
 
 
     
