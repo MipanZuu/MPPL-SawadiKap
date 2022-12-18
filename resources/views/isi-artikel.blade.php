@@ -2,22 +2,46 @@
 @section('content')
 
   <div class="flex flex-col mt-64">
-      <a href="{{route('admin')}}">
-        <div class="flex justify-center mt-2">
-          <img src="/pictures/home.png" alt="">
-        </div> 
-      </a>
-      <a href="{{route('uploadpetunjuk')}}">
+    @if(Auth::check() && Auth::user()->role == 'Admin')
+    <a href="{{route('admin')}}">
+      <div class="flex justify-center mt-2">
+        <img src="/pictures/home.png" alt="">
+      </div>
+      <a href="{{route('RequestedTopics')}}">
         <div class="flex justify-center mt-8">
           <img src="/pictures/explore.png" alt="">
         </div>
       </a>
+      <a href="{{route('admin-manage-post')}}">
+        <div class="flex justify-center mt-8">
+          <img class="object-scale-down h-10 w-10" src="/pictures/admin1.png" alt="">
+        </div>
+      </a>
       <form action="{{route('backup')}}" method="POST">
-          @csrf
+        @csrf
         <div class="flex justify-center mt-8">
           <img src="/pictures/book.png" alt="">
         </div>
       </form>
+      @endif
+
+      @if(Auth::check() && Auth::user()->role == 'Community')
+        <a href="{{route('community')}}">
+        <div class="flex justify-center mt-2">
+                  <img src="/pictures/home.png" alt="">
+              </div> 
+        <a href="{{route('uploadpetunjuk')}}">
+        <div class="flex justify-center mt-8">
+                  <img src="/pictures/explore.png" alt="">
+              </div>
+          </a>
+          <form action="{{route('backup')}}" method="POST">
+              @csrf
+              <div class="flex justify-center mt-8">
+                  <img src="/pictures/book.png" alt="">
+              </div>
+          </form>
+      @endif
 
   {{-- <form action="{{route('backup')}}" method="POST">
           @csrf

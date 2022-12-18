@@ -28,6 +28,11 @@ use Illuminate\Support\Facades\Request;
 Route::get('/',[HomeController::class, 'landing'])->name('landing');
 Route::get('/signup',[HomeController::class, 'signupPage'])->name('signupPage');
 Route::post('/signup-post', [HomeController::class, 'signupUser'])->name('signupUser.post');
+Route::get('/postingUser/{id}',[ArticleController::class, 'getArticleUser'])->name('getArticleDetailsUser');
+Route::get('/home',[HomeController::class, 'ViewJavaUser'])->name('home');
+Route::get('/User-Sunda',[HomeController::class, 'ViewSundaUser'])->name('ViewSundaUser');
+Route::get('/User-Malay',[HomeController::class, 'ViewMalayUser'])->name('ViewMalayUser');
+
 Route::get('/petunjuk',[HomeController::class, 'petunjuk'])->name('petunjuk');
 Route::get('/tambahmahasiswa', [AdminController::class, 'tambahMahasiswa'])->name('tambahmahasiswa');
 Route::post('/tambahmahasiswa/add', [AdminController::class, 'addMahasiswa'])->name('tambahmahasiswa.post');

@@ -50,6 +50,9 @@
       <a href="{{route('signupPage')}}">
       <button class="mt-1 text-white text-bold text-m bg-red-600 w-32 h-10 rounded-full">Sign Up!</button>
     </a>
+    <a href="{{ route('home') }}">
+      <button class="mt-4 text-black text-bold text-m bg-white w-32 h-10 rounded-full">Explore!</button>
+    </a>
     </div>
     <div class="text-sm opacity-60 px-22 text-center text-white">
         Sawadikap. All Rights Reserved!

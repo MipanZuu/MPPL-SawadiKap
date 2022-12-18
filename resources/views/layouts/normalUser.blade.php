@@ -20,7 +20,7 @@
       <div class="flex flex-col flex-auto">
         <div class="items-center ml-10">
       <div class="font-bold text-black-500 text-lg">
-            <!-- {{{Auth::user()->name}}} -->
+            {{-- <!-- {{{Auth::user()->name}}} --> --}}
         </div>
         <div class="text-orangeCerebrum text-md font-semibold italic">
             
