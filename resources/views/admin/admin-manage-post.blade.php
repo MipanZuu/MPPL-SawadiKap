@@ -103,7 +103,7 @@
                   @foreach ($articles as $index => $article)
                     <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap w-6">
-                          {{$index+1}}.
+                          {{($articles->currentPage()-1) * 10 + $index+1}}.
                         </th>
                         <td  class="border border-slate-700 py-4 px-6 w-60">
                           {{ $article -> title }}
@@ -125,7 +125,14 @@
                       @endforeach                           
                 </tbody>
             </table>
+            <div class="row">
+              <div class="col-md-12">
+                  {{ $articles->links('pagination::tailwind') }}
+              </div>
           </div>
+          </div>
+
+          
        
          
 

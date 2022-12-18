@@ -121,6 +121,12 @@
         @endforeach
       </div>
       
+      <div class="row">
+        <div class="col-md-12">
+            {{ $articles->links('pagination::tailwind') }}
+        </div>
+    </div>
+
     </div>
   </section>
 

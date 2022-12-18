@@ -9,7 +9,8 @@ class Topic extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $guarded =['id','status'];
+    protected $primaryKey = 'id';
+    protected $fillable =['id','status'];
 
 
     

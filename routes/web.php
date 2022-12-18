@@ -51,6 +51,9 @@ Route::post('/admin-manage-post/{id}/delete', [AdminController::class, 'deletePo
 Route::get('/posting/{id}',[ArticleController::class, 'getArticle'])->name('getArticleDetails');
 Route::get('/admin-sunda',[AdminController::class, 'viewSundaAdmin'])->name('viewSundaAdmin');
 Route::get('/requestedtopics',[AdminController::class, 'RequestedTopics'])->name('RequestedTopics');
+Route::post('/RejectTopics/{id}',[AdminController::class, 'RejectTopics'])->name('RejectTopics');
+Route::post('/requestedtopics/AcceptTopics/{id}',[AdminController::class, 'AcceptTopics'])->name('AcceptTopics');
+
 
 // Route::get('/admin-manage-post/{lang}',[ArticleController::class, 'getLanguage'])->name('getLanguage');
 

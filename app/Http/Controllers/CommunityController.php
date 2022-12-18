@@ -29,10 +29,10 @@ class CommunityController extends Controller
             ['lang','su'],
             [function ($query) use ($request) {
                 if (($term = $request->term)) {
-                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();
+                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->paginate(10);
                 }
             }]
-        ])->orderby('id','asc')->get();
+        ])->orderby('id','asc')->paginate(10);
         
         return view('community.community-Sunda',['articles' => $articles]);
     }
@@ -43,10 +43,10 @@ class CommunityController extends Controller
             ['lang','ms'],
             [function ($query) use ($request) {
                 if (($term = $request->term)) {
-                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();
+                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->paginate(10);
                 }
             }]
-        ])->orderby('id','asc')->get();
+        ])->orderby('id','asc')->paginate(10);
         
         return view('community.community-malay',['articles' => $articles]);
     }
@@ -57,10 +57,10 @@ class CommunityController extends Controller
             ['lang','jv'],
             [function ($query) use ($request) {
                 if (($term = $request->term)) {
-                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();
+                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->paginate(10);
                 }
             }]
-        ])->orderby('id','asc')->get();
+        ])->orderby('id','asc')->paginate(10);
         
         return view('community.community-jawa',['articles' => $articles]);
     }

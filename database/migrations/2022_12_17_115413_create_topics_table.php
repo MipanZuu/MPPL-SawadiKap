@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('topics', function (Blueprint $table) {
             $table->id('id');
             $table->string('topic');
-            $table->string('status')->nullable();
+            $table->boolean('status')->default(false);
         });
     }
 

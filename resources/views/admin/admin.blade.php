@@ -101,7 +101,7 @@
 
       <div class="flex items-center justify-between p-5 mt-10 bg-white rounded shadow-sm">
         <div>
-          <div class="text-sm text-gray-400 ">Jumlah Users</div>
+          <div class="text-sm text-gray-400 ">Users</div>
           <div class="flex items-center pt-1">
             <div class="text-3xl font-medium text-gray-600 ">{{{Auth::user()->count()}}}</div>
           </div>
@@ -115,9 +115,9 @@
 
       <div class="flex items-center justify-between p-5 mt-10 bg-white rounded shadow-sm">
         <div>
-          <div class="text-sm text-gray-400 ">Jumlah Users</div>
+          <div class="text-sm text-gray-400 ">Topic Request Unfinished</div>
           <div class="flex items-center pt-1">
-            <div class="text-3xl font-medium text-gray-600 ">{{{Auth::user()->count()}}}</div>
+            <div class="text-3xl font-medium text-gray-600 ">{{ $requests->count() }}</div>
           </div>
         </div>
         <div class="text-pink-500">
@@ -129,23 +129,9 @@
 
       <div class="flex items-center justify-between p-5 mt-10 bg-white rounded shadow-sm">
         <div>
-          <div class="text-sm text-gray-400 ">Jumlah Posts</div>
+          <div class="text-sm text-gray-400 ">Posts been uploaded</div>
           <div class="flex items-center pt-1">
             <div class="text-3xl font-medium text-gray-600 ">{{{$post}}}</div>
-          </div>
-        </div>
-        <div class="text-pink-500">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
-          </svg>
-        </div>
-      </div>
-
-      <div class="flex items-center justify-between p-5 mt-10 bg-white rounded shadow-sm">
-        <div>
-          <div class="text-sm text-gray-400 ">Jumlah Users</div>
-          <div class="flex items-center pt-1">
-            <div class="text-3xl font-medium text-gray-600 ">{{Auth::user()->count()}}</div>
           </div>
         </div>
         <div class="text-pink-500">

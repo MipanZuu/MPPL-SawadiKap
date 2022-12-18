@@ -76,24 +76,36 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($topics as $topic)
+                        @foreach($topics as $index => $topic)
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                              <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                 {{ $loop->iteration }}
+                                {{($topics->currentPage()-1) * 10 + $index+1}}.
                             </th>
                             <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{ $topic->topic }}
                             </th>
                             <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                {{ $topic->status }}
+                                @if(($topic->status)  === 1)
+                                <h1 class="text-green-500">Uploaded</h1>
+                                @else
+                                <h1 class="text-red-500">not yet uploaded</h1>
+                                @endif
                             </th>
-                            <td class="" style="width: 200px;">
-                                <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded align-items-end">
-                                    Accept
-                                </a>
-                                <a class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-3">
-                                    Reject
-                                </a>
+                            
+                            <td class="flex justify-evenly" style="width: 200px;">
+                                @if(($topic->status)  === 0)
+                                <form action="{{route('AcceptTopics',[$topic->id])}}" method="post" onsubmit="return confirm('Apakah anda yakin akan menambahkan topik ini?')">
+                                    @csrf
+                                     <button class="mt-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Accept</button>
+                                   </form>
+                                
+                                <form action="{{route('RejectTopics',[$topic->id])}}" method="post" onsubmit="return confirm('Apakah anda yakin akan menghapus topik ini?')">
+                                    @csrf
+                                     <button class="mt-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Reject</button>
+                                   </form>
+                                @else
+                                <h1 class="p-3">No Action </h1>
+                                @endif
                             </td>
                         </tr>
                         @endforeach
@@ -102,6 +114,11 @@
                 </table>
             </div>
 
+            <div class="row">
+                <div class="col-md-12">
+                    {{ $topics->links('pagination::tailwind') }}
+                </div>
+            </div>
 
         </div>
     </div>

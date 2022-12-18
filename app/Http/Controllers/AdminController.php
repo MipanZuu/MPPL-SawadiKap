@@ -104,12 +104,14 @@ class AdminController extends Controller
             $user = Auth::user();
             $users = User::count();
             $post = article::count();
+            $requests = Topic::where('status' , false);
+ 
             // $panitias = Panitia::count();
             // $ormawas = Ormawa::count();
             // $kegiatanpanitias = KegiatanPanitia::count();
             // $kegiatans = Kegiatan::count();
             if ($user->role == 'Admin'){
-                return view('admin.admin',compact('post'));
+                return view('admin.admin',compact('post','requests'));
             }
             else if($user->role == 'User'){
                 return redirect('ormawa');
@@ -150,10 +152,10 @@ class AdminController extends Controller
             ['lang','jv'],
             [function ($query) use ($request) {
                 if (($term = $request->term)) {
-                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();
+                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->paginate(10);
                 }
             }]
-        ])->orderby('id','asc')->get();
+        ])->orderby('id','asc')->paginate(10);
         
         return view('admin.admin-jawa',['articles' => $articles]);
     }
@@ -164,10 +166,10 @@ class AdminController extends Controller
             ['lang','su'],
             [function ($query) use ($request) {
                 if (($term = $request->term)) {
-                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->get();
+                    $query->orWhere('title','LIKE','%'. $term .'%')->orWhere('description','LIKE','%'. $term .'%')->paginate(10);
                 }
             }]
-        ])->orderby('id','asc')->get();
+        ])->orderby('id','asc')->paginate(10);
         
         return view('admin.admin-Sunda',['articles' => $articles]);
     }
@@ -192,10 +194,10 @@ class AdminController extends Controller
         $articles = DB::table('articles')->where([
             [function ($query) use ($request) {
                 if (($term = $request->term)) {
-                    $query->orWhere('lang','LIKE','%'. $term .'%')->get();
+                    $query->orWhere('lang','LIKE','%'. $term .'%')->paginate(10);
                 }
             }]
-        ])->orderby('id','asc')->get();
+        ])->orderby('id','asc')->paginate(10);
         return view('admin.admin-manage-post',['articles' => $articles]);
     }
 
@@ -210,15 +212,38 @@ class AdminController extends Controller
         $id = $request['id'];
 		if (article::where('id', '=', $id)->exists()) {
             $articles = article::where('id',$id)->delete();
-            return redirect()->route('admin.admin-manage-post')->with('success', 'Post Berhasil Dihapus');
+            return redirect()->route('admin-manage-post')->with('success', 'Post Berhasil Dihapus');
         }
-		return redirect('admin.admin-manage-post')->withErrors('Post tidak ditemukan');
+		return redirect('admin-manage-post')->withErrors('Post tidak ditemukan');
     }
 
     public function RequestedTopics(){
-        return view('admin.admin-topic',[
-            "topics" => Topic::all()
-        ]);
+        $topics = DB::table('topics')->orderby('status','desc')->paginate(10);
+        return view('admin.admin-topic',['topics' => $topics]);
+    }
+
+    public function RejectTopics(Request $request){
+        $id = $request['id'];
+		if (Topic::where('id', '=', $id)->exists()) {
+            $topics = Topic::where('id',$id)->delete();
+            return redirect()->route('requestedtopics')->with('success', 'Topik Berhasil Dihapus');
+        }
+		return redirect('requestedtopics')->withErrors('Topik tidak ditemukan');
+        
+    }
+
+    public function AcceptTopics(Request $request){
+        $id = $request['id'];
+        $topic = Topic::where('id', '=', e($id))->first();
+        if ($topic) {
+            $topic->status = 1;
+            $topic->save();
+            return redirect()->route('RequestedTopics', [$id])->with('success', 'Topik Berhasil Ditambahkan');
+        }
+
+       
+        
+        
     }
 
     
