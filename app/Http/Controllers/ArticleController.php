@@ -52,8 +52,10 @@ class ArticleController extends Controller
     }
 
     public function getArticleUser($id){
+        
 		$articels = article::where('id',$id)->first();
-        return view('isi-artikelUser',['articels' => $articels]);
+        $snippets = Snippet::all()->random(1);
+        return view('isi-artikelUser',['articels' => $articels], ['snippets' => $snippets]);
     }
 
     public function getLanguage($lang){

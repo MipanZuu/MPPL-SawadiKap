@@ -114,7 +114,7 @@
       @if($snippet->lang == "ms" )
       <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center mb-5">Melayu</h5>
       @endif
-      @if($snippet->lang == "ms" )
+      @if($snippet->lang == "su" )
       <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center mb-5">Sundanese</h5>
       @endif
 
