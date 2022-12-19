@@ -4,18 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Mahasiswa;
 use App\Models\User;
-use App\Models\Ormawa;
-use App\Models\Petunjuk;
-use App\Models\Mhsormawa;
-use App\Models\Divisi;
-use App\Models\Panitia;
-use App\Models\NilaiPanitia;
-use App\Models\KegiatanPanitia;
-use App\Models\Kegiatan;
-use App\Models\Tahap;
-use App\Models\NilaiOrmawa;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Article;
 use App\Models\Snippet;
@@ -245,10 +234,6 @@ class AdminController extends Controller
             $topic->save();
             return redirect()->route('RequestedTopics', [$id])->with('success', 'Topik Berhasil Ditambahkan');
         }
-
-       
-        
-        
     }
 
     public function add_Snippet(Request $request){
@@ -260,6 +245,11 @@ class AdminController extends Controller
         Snippet::create($snippet);
         return redirect()->route('admin')->with('success', 'Snippet Berhasil Ditambahkan');
     } 
+
+    // public function getSnippet($id){
+	// 	$snippets = Snippet::where('id',$id)->inRandomOrder();
+    //     return view('isi-artikel',['snippets' => $snippets]);
+    // }
     
     public function login(Request $request){
        $request->validate([

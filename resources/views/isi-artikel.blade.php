@@ -109,11 +109,13 @@
         <a href="#">
           <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center mb-5">Sundanese</h5>
         </a>
+        @foreach ($snippets as $snippet)
         <div class="grid grid-cols-3 gap-4 justify-items-center">
-          <div class="text-lg mb-3 font-normal text-gray-700 dark:text-gray-400">Example Sundanese </div>
+          <div class="text-lg mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $snippet->body }} </div>
           <div class="mt-3 w-12 border-t-4 border-gray-700"></div>
-          <div class="text-lg mb-3 font-normal text-gray-700 dark:text-gray-400">Example Translation </div>
+          <div class="text-lg mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $snippet->body_eng }}</div>
         </div>
+        @endforeach
       </div>
     </div>
 

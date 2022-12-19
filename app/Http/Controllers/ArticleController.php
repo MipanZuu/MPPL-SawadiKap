@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\article;
+use App\Models\Snippet;
 use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
@@ -45,7 +46,9 @@ class ArticleController extends Controller
 
     public function getArticle($id){
 		$articels = article::where('id',$id)->first();
-        return view('isi-artikel',['articels' => $articels]);
+        $snippets = Snippet::all()->random(1);
+        // dd($snippets);
+        return view('isi-artikel',['articels' => $articels], ['snippets' => $snippets]);
     }
 
     public function getArticleUser($id){
