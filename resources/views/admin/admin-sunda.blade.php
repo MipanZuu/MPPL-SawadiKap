@@ -34,7 +34,7 @@
         <form action="{{route('logout.post')}}" method="POST">
           @csrf
           <div class="flex justify-center mt-8">
-              <button type="submit" class="text-white text-xs bg-red-500 w-24 h-7 rounded-full">Metuo Cokk !!</button>
+              <button type="submit" class="text-white text-xs bg-red-500 w-24 h-7 rounded-full">Kaluar</button>
           </div>
         </form>
         <div class="text-sm opacity-30 px-22 text-center mt-36 sticky">
