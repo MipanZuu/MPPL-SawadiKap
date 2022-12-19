@@ -106,10 +106,18 @@
     <!-- SNIPPET -->
     <div class="w-max-full grid justify-items-center">
       <div class="max-w-xl p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 align items-center">
-        <a href="#">
-          <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center mb-5">Sundanese</h5>
-        </a>
+       
         @foreach ($snippets as $snippet)
+        @if($snippet->lang == "jv" )
+        <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center mb-5">Javanese</h5>
+      @endif
+      @if($snippet->lang == "ms" )
+      <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center mb-5">Melayu</h5>
+      @endif
+      @if($snippet->lang == "ms" )
+      <h5 class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center mb-5">Sundanese</h5>
+      @endif
+
         <div class="grid grid-cols-3 gap-4 justify-items-center">
           <div class="text-lg mb-3 font-normal text-gray-700 dark:text-gray-400">{{ $snippet->body }} </div>
           <div class="mt-3 w-12 border-t-4 border-gray-700"></div>
