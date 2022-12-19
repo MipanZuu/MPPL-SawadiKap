@@ -7,7 +7,7 @@
           <img src="/pictures/home.png" alt="">
         </div> 
       </a>
-      <a href="{{route('uploadpetunjuk')}}">
+      <a href="{{route('AddSnippet')}}">
         <div class="flex justify-center mt-8">
           <img src="/pictures/explore.png" alt="">
         </div>
@@ -79,7 +79,7 @@
             </select>
           </form>
           </div>
-          <a href="/"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-5">Article Edit Request</button></a>
+          <a href="{{route('RequestedTopics')}}"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-5">Requested Topics</button></a>
           </div>
             
             <table class="w-full text-sm text-left text-gray-900 border-collapse border border-slate-500">

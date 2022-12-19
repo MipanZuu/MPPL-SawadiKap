@@ -5,7 +5,7 @@
     <div class="flex justify-center mt-2">
       <img src="/pictures/home.png" alt="">
     </div>
-    <a href="{{route('RequestedTopics')}}">
+    <a href="{{route('AddSnippet')}}">
       <div class="flex justify-center mt-8">
         <img src="/pictures/explore.png" alt="">
       </div>

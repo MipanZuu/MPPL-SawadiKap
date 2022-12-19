@@ -54,11 +54,13 @@ Route::get('/admin-edit-post/{id}',[AdminController::class, 'adminEditPost'])->n
 Route::post('/admin-edit-post/update', [ArticleController::class, 'edit_process_admin'])->name('editpostingadmin.post');
 Route::post('/admin-manage-post/{id}/delete', [AdminController::class, 'deletePost'])->name('posting.delete');
 Route::get('/posting/{id}',[ArticleController::class, 'getArticle'])->name('getArticleDetails');
+
 Route::get('/admin-sunda',[AdminController::class, 'viewSundaAdmin'])->name('viewSundaAdmin');
 Route::get('/requestedtopics',[AdminController::class, 'RequestedTopics'])->name('RequestedTopics');
 Route::post('/RejectTopics/{id}',[AdminController::class, 'RejectTopics'])->name('RejectTopics');
 Route::post('/requestedtopics/AcceptTopics/{id}',[AdminController::class, 'AcceptTopics'])->name('AcceptTopics');
-
+Route::get('/addsnippet',[AdminController::class, 'AddSnippet'])->name('AddSnippet');
+Route::post('/addsnippet',[AdminController::class, 'add_Snippet'])->name('addSnippet');
 
 // Route::get('/admin-manage-post/{lang}',[ArticleController::class, 'getLanguage'])->name('getLanguage');
 
