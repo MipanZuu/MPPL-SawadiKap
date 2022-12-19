@@ -7,11 +7,6 @@
           <img src="/pictures/home.png" alt="">
         </div> 
       </a>
-      <a href="{{route('uploadpetunjuk')}}">
-        <div class="flex justify-center mt-8">
-          <img src="/pictures/explore.png" alt="">
-        </div>
-      </a>
       <a href="{{route('admin-manage-post')}}">
         <div class="flex justify-center mt-8">
           <img class="object-scale-down h-10 w-10" src="/pictures/admin1.png" alt="">
